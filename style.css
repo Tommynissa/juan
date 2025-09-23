@@ -1,1 +1,42 @@
-<!-- placeholder -->
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.card {
+  flex: 1 1 calc(50% - 1rem);
+  background: #f5f1eb; /* beige bois clair */
+  border-radius: 20px;
+  padding: 2rem 1rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #333;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card i {
+  font-size: 2rem;
+  color: #d4a373; /* doré */
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.card p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%;
+  }
+}
