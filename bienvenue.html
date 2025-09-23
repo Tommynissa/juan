@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenue</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Bienvenue chez nous</h1>
+    <p>Nous sommes heureux de vous accueillir !</p>
+  </header>
+
+  <main>
+    <!-- Bloc météo -->
+    <section>
+      <div class="section-header">
+        <h2>Météo</h2>
+      </div>
+      <div class="weather-widget">
+        <iframe 
+          src="https://forecast7.com/fr/43d70n7d27/nice/?unit=celcius"
+          frameborder="0" 
+          width="100%" 
+          height="200" 
+          style="border-radius:10px;">
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Section infos utiles -->
+    <section>
+      <div class="section-header">
+        <h2>Informations utiles</h2>
+        <a href="asavoir.html" class="btn">Voir plus</a>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <img src="arrivee.jpg" alt="À votre arrivée">
+          <p>À votre arrivée</p>
+        </div>
+        <div class="card">
+          <img src="sejour.jpg" alt="Pendant votre séjour">
+          <p>Pendant votre séjour</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section activités -->
+    <section>
+      <div class="section-header">
+        <h2>Activités</h2>
+        <a href="activites.html" class="btn">Voir plus</a>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <img src="resto.jpg" alt="Restaurants">
+          <p>Restaurants & Gastronomie</p>
+        </div>
+        <div class="card">
+          <img src="apero.jpg" alt="Apéro">
+          <p>Bars & Apéro</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Menu bas -->
+  <nav class="bottom-nav">
+    <a href="bienvenue.html" class="active">Bienvenue</a>
+    <a href="asavoir.html">À savoir</a>
+    <a href="activites.html">Activités</a>
+  </nav>
+</body>
+</html>
