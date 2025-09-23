@@ -12,12 +12,11 @@ main {flex:1; padding-bottom:72px; box-sizing:border-box;}
 .weather-icon{font-size:2rem;}
 .weather-forecast{display:flex;justify-content:space-around;}
 .forecast-day{display:flex;flex-direction:column;align-items:center;font-size:.9rem;}
-.cards{display:flex;flex-wrap:wrap;gap:1rem;padding:1rem;justify-content:center;}
-.card{flex:1 1 calc(50% - 1rem);max-width:420px;background:#f5f1eb;border-radius:16px;padding:1rem .5rem;box-shadow:0 3px 8px rgba(0,0,0,.1);text-align:center;transition:.2s;}
-.card i{font-size:1.6rem;color:#d4a373;margin-bottom:.4rem;}
-.card p{margin:0;font-size:1rem;}
+.cards{display:flex;justify-content:center;gap:.8rem;padding:.8rem;flex-wrap:nowrap;}
+.card{flex:0 0 48%;max-width:48%;background:#f5f1eb;border-radius:14px;padding:.8rem .5rem;box-shadow:0 2px 6px rgba(0,0,0,.1);text-align:center;transition:.2s;}
+.card i{font-size:1.4rem;color:#d4a373;margin-bottom:.3rem;}
+.card p{margin:0;font-size:.9rem;}
 .card:hover{transform:translateY(-3px);}
-@media(max-width:768px){.card{flex:1 1 100%;}}
 .bottom-nav{position:fixed;bottom:0;left:0;right:0;display:flex;justify-content:space-around;background:#fff;border-top:1px solid #ddd;padding:.5rem 0;z-index:1000;}
 .bottom-nav a{text-decoration:none;color:#666;font-size:.8rem;display:flex;flex-direction:column;align-items:center;}
 .bottom-nav a i{font-size:1.2rem;margin-bottom:2px;}
