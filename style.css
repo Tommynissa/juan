@@ -21,6 +21,7 @@ main {flex:1; padding-bottom:72px; box-sizing:border-box;}
 .bottom-nav a{text-decoration:none;color:#666;font-size:.8rem;display:flex;flex-direction:column;align-items:center;}
 .bottom-nav a i{font-size:1.2rem;margin-bottom:2px;}
 .bottom-nav a.active{color:#fff;background:#222;border-radius:8px;padding:.2rem .5rem;}
-/* Séparateur de sections */
+/* Séparateurs de sections */
 section {border-bottom:1px solid #ddd; margin-bottom:1rem; padding-bottom:1rem;}
+section.weather-section {border-bottom:none; margin-bottom:0; padding-bottom:0;}
 section:last-of-type {border-bottom:none;}
