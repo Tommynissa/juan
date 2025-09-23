@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Météo</title>
+</head>
+<body>
+  <a class="weatherwidget-io" href="https://forecast7.com/fr/43d57n7d11/juan-les-pins/"
+     data-label_1="JUAN-LES-PINS"
+     data-label_2="MÉTÉO"
+     data-theme="beige">
+     JUAN-LES-PINS Météo
+  </a>
+  <script>
+  !function(d,s,id){
+    var js,fjs=d.getElementsByTagName(s)[0];
+    if(!d.getElementById(id)){
+      js=d.createElement(s);js.id=id;
+      js.src='https://weatherwidget.io/js/widget.min.js';
+      fjs.parentNode.insertBefore(js,fjs);
+    }
+  }(document,'script','weatherwidget-io-js');
+  </script>
+</body>
+</html>
