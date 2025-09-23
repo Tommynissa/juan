@@ -3,7 +3,7 @@ const weatherEl = document.getElementById('weatherCard');
 
 async function fetchWeather() {
   // Remplacez VOTRE_API_METEO par votre clé OpenWeatherMap (API gratuite)
-  const apiKey = 'VOTRE_API_METEO';
+  const apiKey = AIzaSyAG55BilPn1ryw62MHUE7bv0iufjHTP9ek;
   const city = 'Juan-les-Pins,FR';
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric&lang=fr`;
   try {
