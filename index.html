@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Livret d'accueil — Juan‑les‑Pins</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <h1>Bienvenue à Juan‑les‑Pins</h1>
+      <p class="address">10 avenue du Docteur Fabre, 06160</p>
+      <img src="images/placeholder-photo.jpg" alt="Appartement" class="hero-img">
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="wifi">
+      <h2>Wi‑Fi</h2>
+      <p class="muted">Nom du réseau</p>
+      <p class="big">Appartement_Fabre</p>
+      <p class="muted">Mot de passe</p>
+      <p class="big">azerty1234</p>
+      <p class="note">Pense à remplacer ce code par le vrai avant publication.</p>
+    </section>
+
+    <section class="card" id="acces">
+      <h2>Accès & adresse</h2>
+      <p>10 avenue du Docteur Fabre, 06160 Juan‑les‑Pins</p>
+      <div class="mapwrap">
+        <!-- Remplacez VOTRE_CLE_API par votre clé Google Maps Embed API -->
+        <iframe
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed/v1/place?q=10+Avenue+du+Docteur+Fabre,+Juan-les-Pins&key=VOTRE_CLE_API">
+        </iframe>
+      </div>
+      <p class="muted">Gare Juan‑les‑Pins ~7 min à pied · Aéroport Nice Côte d'Azur ~25 min en voiture</p>
+    </section>
+
+    <section class="card" id="pratique">
+      <h2>Infos pratiques</h2>
+      <ul class="list">
+        <li>Check‑in : 15h • Check‑out : 11h</li>
+        <li>Numéro d'urgence / contact : +33 6 XX XX XX XX</li>
+        <li>Supermarché le plus proche : Carrefour — 300 m</li>
+        <li>Tri des déchets :<br/>• Recyclables → poubelle jaune<br/>• Ordures ménagères → poubelle grise</li>
+      </ul>
+    </section>
+
+    <section class="card" id="activites">
+      <h2>Activités & bonnes adresses</h2>
+      <ul class="list">
+        <li>Plage de Juan‑les‑Pins — 5 min à pied</li>
+        <li>Cap d'Antibes — balade, criques</li>
+        <li>Musée Picasso (Antibes)</li>
+        <li>Restaurants recommandés : Le Pin, La Villa Archange, Chez Lulu</li>
+      </ul>
+    </section>
+
+    <section class="card" id="transports">
+      <h2>Transports à proximité</h2>
+      <ul class="list">
+        <li>Gare Juan‑les‑Pins — 7 min à pied</li>
+        <li>Bus vers Nice / Cannes — arrêts locaux</li>
+        <li>Taxis & VTC disponibles 24/7</li>
+        <li>Aéroport Nice Côte d'Azur — ≈ 25 min en voiture</li>
+      </ul>
+    </section>
+
+    <section class="card" id="meteo">
+      <h2>Météo</h2>
+      <div id="weatherCard">
+        <p class="muted">Chargement…</p>
+      </div>
+      <p class="note">La météo utilise OpenWeatherMap. Remplacez VOTRE_API_METEO dans script.js.</p>
+    </section>
+
+    <section class="card" id="infos-utile">
+      <h2>Infos utiles</h2>
+      <ul class="list">
+        <li>Pharmacie la plus proche : Pharmacie du Centre — 4 min</li>
+        <li>Hôpital le plus proche : Centre Hospitalier d'Antibes</li>
+        <li>Boulangerie : Boulangerie Pâtisserie — 2 min à pied</li>
+      </ul>
+    </section>
+
+    <section class="card small" id="regles">
+      <h2>Règlement</h2>
+      <p class="muted">Merci de respecter les voisins et de ne pas organiser de fêtes. Fumeur → balcon uniquement.</p>
+    </section>
+
+    <section class="card small" id="credits">
+      <h2>À propos</h2>
+      <p class="muted">Livret numérique — Appartement Juan‑les‑Pins • Conçu pour mobile</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Appartement Juan‑les‑Pins</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
