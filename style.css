@@ -1,1 +1,158 @@
-<!-- placeholder -->
+
+/* ---- Layout de base ---- */
+html, body {
+  height: 100%;
+  margin: 0;
+  background: #fafafa; /* fond blanc cassé */
+  color: #333;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 1rem 1rem 0;
+  text-align: center;
+}
+
+main {
+  flex: 1;
+  padding-bottom: 72px; /* espace pour la barre de menu fixée */
+  box-sizing: border-box;
+}
+
+/* ---- Logo ---- */
+.logo {
+  max-width: 300px;
+  width: 80%;
+  height: auto;
+  margin: 0 auto 1rem auto;
+  display: block;
+}
+@media (max-width: 768px) {
+  .logo { max-width: 250px; width: 70%; }
+}
+@media (max-width: 480px) {
+  .logo { max-width: 220px; width: 80%; }
+}
+
+/* ---- Texte d’accueil ---- */
+.welcome-text {
+  max-width: 700px;
+  margin: 1.2rem auto 0;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  padding: 0 1rem;
+}
+@media (max-width: 768px) {
+  .welcome-text { font-size: 1rem; line-height: 1.6; }
+}
+
+/* ---- Titre de section + bouton ---- */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .75rem;
+  padding: 0 1rem;
+  margin-top: .5rem;
+}
+.section-header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+.btn {
+  background: #222;
+  color: #fff;
+  padding: .5rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: .9rem;
+  white-space: nowrap;
+}
+
+/* ---- Carte météo ---- */
+.weather-card {
+  background: #e8dcc7; /* bois clair */
+  border-radius: 16px;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+  text-align: center;
+}
+.weather-now {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: .75rem;
+}
+.weather-now h3 { margin: 0; font-size: 1.4rem; }
+.weather-icon { font-size: 2rem; }
+.weather-forecast {
+  display: flex; justify-content: space-around; gap: .5rem;
+}
+.forecast-day {
+  display: flex; flex-direction: column; align-items: center; font-size: .9rem;
+}
+
+/* ---- Cartes générales ---- */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+}
+.card {
+  flex: 1 1 calc(50% - 1rem);
+  max-width: 420px;
+  background: #f5f1eb; /* beige très doux */
+  border-radius: 20px;
+  padding: 1.6rem 1rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  text-align: center;
+  color: #333;
+  transition: transform .2s ease;
+}
+.card:hover { transform: translateY(-3px); }
+.card i {
+  font-size: 2rem;
+  color: #d4a373; /* doré doux */
+  margin-bottom: .75rem;
+  display: block;
+}
+.card p { margin: 0; font-size: 1.05rem; }
+
+@media (max-width: 768px) {
+  .card { flex: 1 1 100%; }
+}
+
+/* ---- Barre de menu bas ---- */
+.bottom-nav {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  display: flex;
+  justify-content: space-around;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  padding: .5rem 0;
+  z-index: 1000;
+}
+.bottom-nav a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: .8rem;
+  padding: .3rem .6rem;
+  border-radius: 12px;
+  transition: all .25s ease;
+}
+.bottom-nav a i { font-size: 1.2rem; margin-bottom: 2px; }
+.bottom-nav a.active { color: #fff; background: #222; }
