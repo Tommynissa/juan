@@ -25,3 +25,8 @@ main {flex:1; padding-bottom:72px; box-sizing:border-box;}
 section {border-bottom:1px solid #ddd; margin-bottom:1rem; padding-bottom:1rem;}
 section.weather-section {border-bottom:none; margin-bottom:0; padding-bottom:0;}
 section:last-of-type {border-bottom:none;}
+/* Adresse */
+.address-box {text-align:center;padding:1rem;}
+.address-box p {margin:0 0 1rem;font-size:1rem;color:#333;}
+.map-btn {display:inline-block;padding:.5rem 1.2rem;border:2px solid #d4a373;color:#d4a373;border-radius:999px;text-decoration:none;font-weight:500;transition:background .3s,color .3s;}
+.map-btn:hover {background:#d4a373;color:#fff;}
