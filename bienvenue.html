@@ -22,21 +22,22 @@
       <div class="weather-widget">
         <a class="weatherwidget-io" href="https://forecast7.com/fr/43d57n7d11/juan-les-pins/"
            data-label_1="JUAN-LES-PINS" 
-           data-label_2="Météo" 
-           data-theme="pure">
+           data-label_2="MÉTÉO" 
+           data-theme="beige">
            JUAN-LES-PINS Météo
         </a>
-        <script>
-          !function(d,s,id){
-            var js,fjs=d.getElementsByTagName(s)[0];
-            if(!d.getElementById(id)){
-              js=d.createElement(s);js.id=id;
-              js.src='https://weatherwidget.io/js/widget.min.js';
-              fjs.parentNode.insertBefore(js,fjs);
-            }
-          }(document,'script','weatherwidget-io-js');
-        </script>
       </div>
+
+      <script>
+      !function(d,s,id){
+        var js,fjs=d.getElementsByTagName(s)[0];
+        if(!d.getElementById(id)){
+          js=d.createElement(s);js.id=id;
+          js.src='https://weatherwidget.io/js/widget.min.js';
+          fjs.parentNode.insertBefore(js,fjs);
+        }
+      }(document,'script','weatherwidget-io-js');
+      </script>
     </section>
 
     <!-- Section infos utiles -->
@@ -77,21 +78,19 @@
   </main>
 
   <!-- Menu bas -->
-  
   <nav class="bottom-nav">
     <a href="bienvenue.html" class="active">
       <i class="fa-solid fa-house"></i>
       <span>Bienvenue</span>
     </a>
-    <a href="asavoir.html" >
+    <a href="asavoir.html">
       <i class="fa-solid fa-circle-info"></i>
       <span>À savoir</span>
     </a>
-    <a href="activites.html" >
+    <a href="activites.html">
       <i class="fa-solid fa-map-location-dot"></i>
       <span>Activités</span>
     </a>
   </nav>
-
 </body>
 </html>
