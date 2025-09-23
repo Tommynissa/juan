@@ -55,6 +55,7 @@
     <a href="activites.html"><i class="fa-solid fa-map-location-dot"></i><span class="i18n" data-fr="Activités" data-en="Activities"></span></a>
   </nav>
 
+  <!-- Scripts -->
   <script>
   function setLang(lang) {
     document.querySelectorAll('.i18n').forEach(el => {
@@ -66,6 +67,40 @@
     const savedLang = localStorage.getItem("lang") || "fr";
     setLang(savedLang);
   });
+
+  // météo
+  const lat = 43.567, lon = 7.112;
+  fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&daily=temperature_2m_max,temperature_2m_min,weathercode&timezone=auto`)
+    .then(r=>r.json())
+    .then(data => {
+      const current = data.current_weather, daily = data.daily;
+      let html = `<div class="weather-now">
+        <span class="weather-icon">${getIcon(current.weathercode)}</span>
+        <div><h3>${current.temperature}°C</h3><p>Vent ${current.windspeed} km/h</p></div>
+      </div><div class="weather-forecast">`;
+      for(let i=0;i<3;i++){
+        const d = new Date(daily.time[i]);
+        const day = d.toLocaleDateString('fr-FR',{weekday:'short'});
+        html += `<div class="forecast-day">
+          <span>${day}</span>
+          <span class="weather-icon">${getIcon(daily.weathercode[i])}</span>
+          <span>${daily.temperature_2m_min[i]}° / ${daily.temperature_2m_max[i]}°</span>
+        </div>`;
+      }
+      html += "</div>";
+      document.getElementById("weatherCard").innerHTML = html;
+    });
+  function getIcon(c){
+    if([0].includes(c)) return "☀️";
+    if([1,2].includes(c)) return "🌤️";
+    if([3].includes(c)) return "☁️";
+    if([45,48].includes(c)) return "🌫️";
+    if([51,61,80].includes(c)) return "🌦️";
+    if([63,65,81,82].includes(c)) return "🌧️";
+    if([71,73,75,85,86].includes(c)) return "❄️";
+    if([95,96,99].includes(c)) return "⛈️";
+    return "❔";
+  }
   </script>
 </body>
 </html>
