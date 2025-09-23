@@ -6,43 +6,60 @@
   <title>Activités</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <header>
-    <h1>Activités</h1>
+    <div class="lang-switch">
+      <button onclick="setLang('fr')">🇫🇷 FR</button>
+      <button onclick="setLang('en')">🇬🇧 EN</button>
+    </div>
+    <h1 class="i18n" data-fr="Découvrir Juan-les-Pins" data-en="Discover Juan-les-Pins"></h1>
+    <p class="i18n" data-fr="Voici une sélection de nos bars, restaurants et lieux incontournables." data-en="Here is a selection of bars, restaurants, and must-see places."></p>
   </header>
 
   <main>
-    <div id="map">
-      <img src="map.jpg" alt="Carte des activités" style="width:100%">
-    </div>
+    <section>
+      <div class="section-header"><h2 class="i18n" data-fr="Bars & Restaurants" data-en="Bars & Restaurants"></h2></div>
+      <div class="cards">
+        <div class="card"><i class="fa-solid fa-cocktail"></i><p class="i18n" data-fr="Pam Pam - Cocktails & ambiance brésilienne" data-en="Pam Pam - Cocktails & Brazilian vibe"></p></div>
+        <div class="card"><i class="fa-solid fa-utensils"></i><p class="i18n" data-fr="La Passagère - Restaurant étoilé au Belles Rives" data-en="La Passagère - Michelin-starred restaurant at Belles Rives"></p></div>
+        <div class="card"><i class="fa-solid fa-mug-hot"></i><p class="i18n" data-fr="Hemingway - Café lounge face à la mer" data-en="Hemingway - Lounge café by the sea"></p></div>
+      </div>
+    </section>
 
-    <div class="explore">
-      <button>Gastronomie</button>
-      <button>Apéro</button>
-      <button>Lieux emblématiques</button>
-      <button>Guide des quartiers</button>
-    </div>
+    <section>
+      <div class="section-header"><h2 class="i18n" data-fr="Plages & Loisirs" data-en="Beaches & Leisure"></h2></div>
+      <div class="cards">
+        <div class="card"><i class="fa-solid fa-umbrella-beach"></i><p class="i18n" data-fr="Plage de la Garoupe - Une des plus belles plages d’Antibes" data-en="Garoupe Beach - One of the most beautiful beaches in Antibes"></p></div>
+        <div class="card"><i class="fa-solid fa-tree"></i><p class="i18n" data-fr="Parc Exflora - Grand jardin méditerranéen pour se promener" data-en="Exflora Park - Large Mediterranean garden for a walk"></p></div>
+        <div class="card"><i class="fa-solid fa-ship"></i><p class="i18n" data-fr="Port Gallice - Marina chic de Juan-les-Pins" data-en="Port Gallice - Chic marina in Juan-les-Pins"></p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header"><h2 class="i18n" data-fr="Culture & Événements" data-en="Culture & Events"></h2></div>
+      <div class="cards">
+        <div class="card"><i class="fa-solid fa-music"></i><p class="i18n" data-fr="Festival Jazz à Juan - Un rendez-vous mondial du jazz" data-en="Jazz Festival in Juan - A world-class jazz event"></p></div>
+        <div class="card"><i class="fa-solid fa-landmark"></i><p class="i18n" data-fr="Vieil Antibes - Rues pittoresques et marché provençal" data-en="Old Antibes - Picturesque streets and Provencal market"></p></div>
+      </div>
+    </section>
   </main>
 
-  
-  
   <nav class="bottom-nav">
-    <a href="bienvenue.html">
-      <i class="fa-solid fa-house"></i>
-      <span>Bienvenue</span>
-    </a>
-    <a href="asavoir.html">
-      <i class="fa-solid fa-circle-info"></i>
-      <span>À savoir</span>
-    </a>
-    <a href="activites.html" class="active">
-      <i class="fa-solid fa-map-location-dot"></i>
-      <span>Activités</span>
-    </a>
+    <a href="bienvenue.html"><i class="fa-solid fa-house"></i><span class="i18n" data-fr="Bienvenue" data-en="Welcome"></span></a>
+    <a href="asavoir.html"><i class="fa-solid fa-circle-info"></i><span class="i18n" data-fr="À savoir" data-en="To know"></span></a>
+    <a href="activites.html"><i class="fa-solid fa-map-location-dot"></i><span class="i18n" data-fr="Activités" data-en="Activities"></span></a>
   </nav>
 
-
+  <script>
+  function setLang(lang) {
+    document.querySelectorAll('.i18n').forEach(el => { el.textContent = el.dataset[lang]; });
+    localStorage.setItem("lang", lang);
+  }
+  document.addEventListener("DOMContentLoaded", () => {
+    const savedLang = localStorage.getItem("lang") || "fr";
+    setLang(savedLang);
+  });
+  </script>
 </body>
 </html>
