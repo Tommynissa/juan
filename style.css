@@ -1,9 +1,18 @@
 
-body {
+html, body {
+  height: 100%;
   margin: 0;
+  background: #fafafa; /* fond uniforme */
+  display: flex;
+  flex-direction: column;
   font-family: Arial, sans-serif;
-  background: #fafafa;
   color: #333;
+}
+
+main {
+  flex: 1;
+  padding-bottom: 70px; /* espace pour menu bas */
+  box-sizing: border-box;
 }
 
 header {
@@ -84,10 +93,6 @@ header {
   background: #222;
 }
 
-.bottom-nav a.active::after {
-  width: 60%;
-}
-
 .weather-card {
   background: #e8dcc7;
   border-radius: 15px;
@@ -126,4 +131,58 @@ header {
   flex-direction: column;
   align-items: center;
   font-size: 0.9rem;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+  }
+  .card {
+    flex: 1 1 100%;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+  .weather-now h3 {
+    font-size: 1.2rem;
+  }
+  .weather-icon {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bottom-nav a span {
+    font-size: 0.7rem;
+  }
+  .bottom-nav a i {
+    font-size: 1rem;
+  }
+  .card {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+}
+
+
+.logo {
+  max-width: 300px;
+  width: 80%;
+  height: auto;
+  margin: 0 auto 1rem auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    max-width: 150px;
+  }
 }

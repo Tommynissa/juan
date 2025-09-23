@@ -13,16 +13,17 @@
       <button onclick="setLang('fr')">🇫🇷 FR</button>
       <button onclick="setLang('en')">🇬🇧 EN</button>
     </div>
-    <h1 class="i18n" data-fr="Bienvenue à Juan-les-Pins" data-en="Welcome to Juan-les-Pins"></h1>
-    <p class="i18n" data-fr="Nous sommes ravis de vous accueillir dans notre appartement." data-en="We are delighted to host you in our apartment."></p>
+    <!-- Logo intégré -->
+    <img src="logo.png" alt="Anaïs Logo" class="logo">
+    <p class="i18n" 
+       data-fr="Perle de la Côte d’Azur, Juan-les-Pins vous invite à profiter de ses plages dorées, de ses pins et de ses soirées animées." 
+       data-en="A gem of the French Riviera, Juan-les-Pins invites you to enjoy its golden beaches, pine trees, and lively evenings.">
+    </p>
   </header>
 
   <main>
     <!-- Bloc météo -->
     <section>
-      <div class="section-header">
-        <h2 class="i18n" data-fr="Météo" data-en="Weather"></h2>
-      </div>
       <div id="weatherCard" class="weather-card">
         <p class="i18n" data-fr="Chargement de la météo..." data-en="Loading weather..."></p>
       </div>
