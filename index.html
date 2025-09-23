@@ -29,84 +29,24 @@
       </div>
     </section>
 
-    <!-- Infos utiles -->
+    <!-- Section infos utiles simplifiée -->
     <section>
       <div class="section-header">
         <h2 class="i18n" data-fr="Informations utiles" data-en="Useful Info"></h2>
+        <a href="asavoir.html" class="btn i18n" data-fr="Voir plus" data-en="See more"></a>
       </div>
       <div class="cards">
         <div class="card">
-          <i class="fa-solid fa-key"></i>
-          <p class="i18n" data-fr="Check-in : dès 15h | Check-out : avant 11h" data-en="Check-in: from 3 PM | Check-out: before 11 AM"></p>
+          <i class="fa-solid fa-car"></i>
+          <p class="i18n" data-fr="En route vers l’appartement" data-en="On the way to the apartment"></p>
         </div>
         <div class="card">
-          <i class="fa-solid fa-door-closed"></i>
-          <p class="i18n" data-fr="Code porte : 1234A" data-en="Door code: 1234A"></p>
-        </div>
-        <div class="card">
-          <i class="fa-solid fa-square-parking"></i>
-          <p class="i18n" data-fr="Parking : privé rue X, badge fourni" data-en="Parking: private on street X, badge provided"></p>
-        </div>
-        <div class="card">
-          <i class="fa-solid fa-wifi"></i>
-          <p class="i18n" data-fr="Wi-Fi : MaisonJuan | MDP : 12345678" data-en="Wi-Fi: MaisonJuan | Password: 12345678"></p>
+          <i class="fa-solid fa-door-open"></i>
+          <p class="i18n" data-fr="Votre arrivée" data-en="Your arrival"></p>
         </div>
       </div>
     </section>
   </main>
-
-  <!-- Script météo -->
-  <script>
-    const lat = 43.567;
-    const lon = 7.112;
-
-    fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&daily=temperature_2m_max,temperature_2m_min,weathercode&timezone=auto`)
-      .then(response => response.json())
-      .then(data => {
-        const current = data.current_weather;
-        const daily = data.daily;
-
-        let forecastHTML = `
-          <div class="weather-now">
-            <span class="weather-icon">${getWeatherIcon(current.weathercode)}</span>
-            <div>
-              <h3>${current.temperature}°C</h3>
-              <p>Vent / Wind: ${current.windspeed} km/h</p>
-            </div>
-          </div>
-          <div class="weather-forecast">
-        `;
-
-        for (let i = 0; i < 3; i++) {
-          const date = new Date(daily.time[i]);
-          const options = { weekday: 'short' };
-          const dayName = date.toLocaleDateString('fr-FR', options);
-
-          forecastHTML += `
-            <div class="forecast-day">
-              <span>${dayName}</span>
-              <span class="weather-icon">${getWeatherIcon(daily.weathercode[i])}</span>
-              <span>${daily.temperature_2m_min[i]}° / ${daily.temperature_2m_max[i]}°</span>
-            </div>
-          `;
-        }
-
-        forecastHTML += "</div>";
-        document.getElementById("weatherCard").innerHTML = forecastHTML;
-      });
-
-    function getWeatherIcon(code) {
-      if ([0].includes(code)) return "☀️";
-      if ([1,2].includes(code)) return "🌤️";
-      if ([3].includes(code)) return "☁️";
-      if ([45,48].includes(code)) return "🌫️";
-      if ([51,61,80].includes(code)) return "🌦️";
-      if ([63,65,81,82].includes(code)) return "🌧️";
-      if ([71,73,75,85,86].includes(code)) return "❄️";
-      if ([95,96,99].includes(code)) return "⛈️";
-      return "❔";
-    }
-  </script>
 
   <!-- Menu bas -->
   <nav class="bottom-nav">
@@ -115,7 +55,6 @@
     <a href="activites.html"><i class="fa-solid fa-map-location-dot"></i><span class="i18n" data-fr="Activités" data-en="Activities"></span></a>
   </nav>
 
-  <!-- Script de langue -->
   <script>
   function setLang(lang) {
     document.querySelectorAll('.i18n').forEach(el => {
