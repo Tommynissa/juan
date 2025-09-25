@@ -9,19 +9,90 @@
 </head>
 <body>
 <header>
-  <div class="lang-switch"><button onclick="setLang('fr')">🇫🇷 FR</button><button onclick="setLang('en')">🇬🇧 EN</button></div>
+  <div class="lang-switch">
+    <button onclick="setLang('fr')">🇫🇷 FR</button>
+    <button onclick="setLang('en')">🇬🇧 EN</button>
+  </div>
   <img src="logo.png" class="logo" alt="Anaïs logo">
   <p class="i18n welcome-text"
      data-fr="Bienvenue à Juan-les-Pins, perle de la Côte d’Azur ! Ici, la mer Méditerranée se mêle à l’effervescence des soirées, aux plages dorées et aux balades entre pins et ruelles charmantes. Vous êtes au cœur d’un lieu vivant, entre douceur provençale et élégance azuréenne. Profitez de la plage, des restaurants, des terrasses animées et de l’ambiance unique qui fait la réputation de Juan-les-Pins."
      data-en="Welcome to Juan-les-Pins, jewel of the French Riviera! Here, the Mediterranean Sea blends with vibrant nightlife, golden beaches, and peaceful walks among pine trees and charming alleys. You’re in the heart of a lively place where Provençal warmth meets Riviera elegance. Enjoy the beach, restaurants, lively terraces, and the unique atmosphere that makes Juan-les-Pins so famous."></p>
 </header>
+
 <main class="content">
+  <!-- METEO COMPACTE -->
   <section class="weather-section">
     <div id="weatherCard" class="weather-card">
       <p class="i18n" data-fr="Chargement météo..." data-en="Loading weather..."></p>
     </div>
   </section>
+
+  <!-- INFORMATIONS UTILES -->
+  <section>
+    <div class="section-header">
+      <h2 class="i18n" data-fr="Informations utiles" data-en="Useful info"></h2>
+      <a href="asavoir.html" class="btn i18n" data-fr="Voir plus" data-en="See more"></a>
+    </div>
+    <div class="cards scroll-x">
+      <a class="card" href="acces.html">
+        <i class="fa-solid fa-door-open"></i>
+        <p class="i18n" data-fr="Votre accès" data-en="Your access"></p>
+      </a>
+      <a class="card" href="wifi.html">
+        <i class="fa-solid fa-wifi"></i>
+        <p>Wi‑Fi</p>
+      </a>
+      <a class="card" href="parking.html">
+        <i class="fa-solid fa-square-parking"></i>
+        <p>Parking</p>
+      </a>
+      <a class="card" href="code.html">
+        <i class="fa-solid fa-key"></i>
+        <p class="i18n" data-fr="Code d’entrée" data-en="Entry code"></p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ACTIVITÉS -->
+  <section>
+    <div class="section-header">
+      <h2 class="i18n" data-fr="Activités" data-en="Activities"></h2>
+      <a href="activites.html" class="btn i18n" data-fr="Voir plus" data-en="See more"></a>
+    </div>
+    <div class="cards scroll-x">
+      <a class="card" href="restaurants.html">
+        <i class="fa-solid fa-utensils"></i>
+        <p class="i18n" data-fr="Restaurants & Bars" data-en="Restaurants & Bars"></p>
+      </a>
+      <a class="card" href="plages.html">
+        <i class="fa-solid fa-umbrella-beach"></i>
+        <p class="i18n" data-fr="Plages & Loisirs" data-en="Beaches & Leisure"></p>
+      </a>
+      <a class="card" href="decouvrir.html">
+        <i class="fa-solid fa-map-location-dot"></i>
+        <p class="i18n" data-fr="À découvrir" data-en="To discover"></p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ADRESSE -->
+  <section>
+    <div class="section-header">
+      <h2 class="i18n" data-fr="Adresse" data-en="Address"></h2>
+    </div>
+    <div class="address-box">
+      <p class="i18n" data-fr="xx avenue du Docteur Fabre<br>06160 Juan-les-Pins" data-en="xx avenue du Docteur Fabre<br>06160 Juan-les-Pins"></p>
+      <a href="https://www.google.com/maps/place/xx+avenue+du+Docteur+Fabre+06160+Juan-les-Pins" target="_blank" class="map-btn i18n" data-fr="Voir sur Google Maps" data-en="View on Google Maps"></a>
+    </div>
+  </section>
 </main>
+
+<!-- MENU BAS -->
+<nav class="bottom-nav">
+  <a href="bienvenue.html" class="active"><i class="fa-solid fa-house"></i><span class="i18n" data-fr="Bienvenue" data-en="Welcome"></span></a>
+  <a href="asavoir.html"><i class="fa-solid fa-circle-info"></i><span class="i18n" data-fr="À savoir" data-en="To know"></span></a>
+  <a href="activites.html"><i class="fa-solid fa-map-location-dot"></i><span class="i18n" data-fr="Activités" data-en="Activities"></span></a>
+</nav>
 
 <script>
 function setLang(lang){
@@ -30,7 +101,7 @@ function setLang(lang){
 }
 document.addEventListener('DOMContentLoaded',()=>{setLang(localStorage.getItem('lang')||'fr');});
 
-// Open-Meteo (Juan-les-Pins)
+// Open-Meteo (Juan-les-Pins) - Météo compacte
 const lat=43.567, lon=7.112;
 function iconFor(code){
   if([0].includes(code))return "☀️";
