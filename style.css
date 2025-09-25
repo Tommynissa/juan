@@ -181,7 +181,7 @@ main {
   scroll-snap-align: start;
 }
 
-/* Colonne (À savoir / Activités) centrées fullwidth */
+/* Colonne (À savoir / Activités) pleine largeur */
 .cards.vertical {
   display: flex;
   flex-direction: column;
@@ -193,8 +193,7 @@ main {
   flex-direction: column;
   gap: 1rem;
   width: 100%;
-  max-width: 800px;  /* largeur max centrée */
-  margin: 0 auto;
+  margin: 0;
   padding: 1rem;
 }
 .cards.vertical.fullwidth .card {
