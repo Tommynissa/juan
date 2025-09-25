@@ -1,13 +1,12 @@
 <!DOCTYPE html><html lang="fr"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anaïs</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head><body>
 <header><h1 class="i18n" data-fr="À découvrir" data-en="To discover"></h1></header>
-<main class="content">
-  <p class="i18n" data-fr="Promenade des pins, marché, musées d’Antibes." data-en="Pine promenade, market, Antibes museums."></p>
-</main>
+<main class="content"><div class="list"><h3 class="i18n" data-fr="Cap d’Antibes" data-en="Cape of Antibes"></h3><ul><li class="i18n" data-fr="Sentier du littoral (panoramas)" data-en="Coastal path (panoramic views)"></li><li class="i18n" data-fr="Pins et criques sauvages" data-en="Pine trees &amp; coves"></li><li class="i18n" data-fr="Prévoir chaussures fermées" data-en="Wear proper shoes"></li></ul><h3 class="i18n" data-fr="Antibes vieille ville" data-en="Antibes old town"></h3><ul><li class="i18n" data-fr="Remparts et ruelles" data-en="Ramparts &amp; alleys"></li><li class="i18n" data-fr="Marché provençal (matin)" data-en="Provençal market (morning)"></li><li class="i18n" data-fr="Boutiques et galeries" data-en="Shops and galleries"></li></ul><h3 class="i18n" data-fr="Culture à proximité" data-en="Nearby culture"></h3><ul><li class="i18n" data-fr="Musées, expos saisonnières" data-en="Museums &amp; seasonal exhibitions"></li><li class="i18n" data-fr="Festivals d’été" data-en="Summer festivals"></li><li class="i18n" data-fr="Concerts en plein air" data-en="Open-air concerts"></li></ul></div></main>
 
   <nav class="bottom-nav">
     <a href="bienvenue.html"><i class="fa-solid fa-house"></i><span class="i18n" data-fr="Bienvenue" data-en="Welcome"></span></a>
@@ -16,7 +15,7 @@
   </nav>
 
 <script>
-function setLang(lang){document.querySelectorAll('.i18n').forEach(el=>{el.textContent=el.dataset[lang];});localStorage.setItem('lang',lang);}
+function setLang(lang){document.querySelectorAll('.i18n').forEach(el=>{el.innerHTML=el.dataset[lang];});localStorage.setItem('lang',lang);}
 document.addEventListener('DOMContentLoaded',()=>{setLang(localStorage.getItem('lang')||'fr');});
 </script>
 </body></html>

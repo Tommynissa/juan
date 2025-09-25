@@ -1,13 +1,12 @@
 <!DOCTYPE html><html lang="fr"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anaïs</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head><body>
 <header><h1 class="i18n" data-fr="Wi‑Fi" data-en="Wi‑Fi"></h1></header>
-<main class="content">
-  <p class="i18n" data-fr="Nom du réseau : AnaisGuest<br>Mot de passe : AnaisGuest2025" data-en="Network name: AnaisGuest<br>Password: AnaisGuest2025"></p>
-</main>
+<main class="content"><div class="list"><h3 class="i18n" data-fr="Connexion" data-en="Connection"></h3><ul><li class="i18n" data-fr="Nom du réseau (SSID) : AnaisGuest" data-en="Network name (SSID): AnaisGuest"></li><li class="i18n" data-fr="Mot de passe : AnaisGuest2025 (à modifier)" data-en="Password: AnaisGuest2025 (to update)"></li><li class="i18n" data-fr="Astuce : redémarrer la box si besoin" data-en="Tip: reboot the router if needed"></li></ul></div></main>
 
   <nav class="bottom-nav">
     <a href="bienvenue.html"><i class="fa-solid fa-house"></i><span class="i18n" data-fr="Bienvenue" data-en="Welcome"></span></a>
@@ -16,7 +15,7 @@
   </nav>
 
 <script>
-function setLang(lang){document.querySelectorAll('.i18n').forEach(el=>{el.textContent=el.dataset[lang];});localStorage.setItem('lang',lang);}
+function setLang(lang){document.querySelectorAll('.i18n').forEach(el=>{el.innerHTML=el.dataset[lang];});localStorage.setItem('lang',lang);}
 document.addEventListener('DOMContentLoaded',()=>{setLang(localStorage.getItem('lang')||'fr');});
 </script>
 </body></html>

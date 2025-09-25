@@ -1,33 +1,54 @@
 <!DOCTYPE html><html lang="fr"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anaïs</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head><body>
 <header>
-<div class="lang-switch"><button onclick="setLang('fr')">🇫🇷 FR</button><button onclick="setLang('en')">🇬🇧 EN</button></div>
-<img src="logo.png" class="logo">
-<p class="i18n welcome-text" data-fr="Bienvenue à Juan-les-Pins, perle de la Côte d’Azur !" data-en="Welcome to Juan-les-Pins, jewel of the French Riviera!"></p>
+  <div class="lang-switch"><button onclick="setLang('fr')">🇫🇷 FR</button><button onclick="setLang('en')">🇬🇧 EN</button></div>
+  <img src="logo.png" class="logo" alt="Anaïs logo">
+  <p class="i18n welcome-text"
+     data-fr="Bienvenue à Juan-les-Pins, perle de la Côte d’Azur ! Ici, la mer Méditerranée se mêle à l’effervescence des soirées, aux plages dorées et aux balades entre pins et ruelles charmantes. Vous êtes au cœur d’un lieu vivant, entre douceur provençale et élégance azuréenne. Profitez de la plage, des restaurants, des terrasses animées et de l’ambiance unique qui fait la réputation de Juan-les-Pins."
+     data-en="Welcome to Juan-les-Pins, jewel of the French Riviera! Here, the Mediterranean Sea blends with vibrant nightlife, golden beaches, and peaceful walks among pine trees and charming alleys. You’re in the heart of a lively place where Provençal warmth meets Riviera elegance. Enjoy the beach, restaurants, lively terraces, and the unique atmosphere that makes Juan-les-Pins so famous."></p>
 </header>
 <main class="content">
-<section class="weather-section"><div id="weatherCard" class="weather-card"><p class="i18n" data-fr="Chargement météo..." data-en="Loading weather..."></p></div></section>
-<section><div class="section-header"><h2 class="i18n" data-fr="Informations utiles" data-en="Useful info"></h2></div>
-<div class="cards scroll-x">
-<a class="card" href="acces.html"><i class="fa-solid fa-door-open"></i><p class="i18n" data-fr="Votre accès" data-en="Your access"></p></a>
-<a class="card" href="wifi.html"><i class="fa-solid fa-wifi"></i><p>Wi‑Fi</p></a>
-<a class="card" href="parking.html"><i class="fa-solid fa-square-parking"></i><p>Parking</p></a>
-<a class="card" href="code.html"><i class="fa-solid fa-key"></i><p class="i18n" data-fr="Code d’entrée" data-en="Entry code"></p></a>
-</div></section>
-<section><div class="section-header"><h2 class="i18n" data-fr="Activités" data-en="Activities"></h2></div>
-<div class="cards scroll-x">
-<a class="card" href="restaurants.html"><i class="fa-solid fa-utensils"></i><p class="i18n" data-fr="Restaurants & Bars" data-en="Restaurants & Bars"></p></a>
-<a class="card" href="plages.html"><i class="fa-solid fa-umbrella-beach"></i><p class="i18n" data-fr="Plages & Loisirs" data-en="Beaches & Leisure"></p></a>
-<a class="card" href="decouvrir.html"><i class="fa-solid fa-map-location-dot"></i><p class="i18n" data-fr="À découvrir" data-en="To discover"></p></a>
-</div></section>
-<section><div class="section-header"><h2 class="i18n" data-fr="Adresse" data-en="Address"></h2></div>
-<div class="address-box"><p class="i18n" data-fr="xx avenue du Docteur Fabre<br>06160 Juan-les-Pins" data-en="xx avenue du Docteur Fabre<br>06160 Juan-les-Pins"></p>
-<a href="https://www.google.com/maps/place/xx+avenue+du+Docteur+Fabre+06160+Juan-les-Pins" target="_blank" class="map-btn i18n" data-fr="Voir sur Google Maps" data-en="View on Google Maps"></a></div>
-</section>
+  <section class="weather-section">
+    <div id="weatherCard" class="weather-card"><p class="i18n" data-fr="Chargement de la météo..." data-en="Loading weather..."></p></div>
+  </section>
+
+  <section>
+    <div class="section-header">
+      <h2 class="i18n" data-fr="Informations utiles" data-en="Useful info"></h2>
+      <a href="asavoir.html" class="btn i18n" data-fr="Voir plus" data-en="See more"></a>
+    </div>
+    <div class="cards scroll-x">
+      <a class="card" href="acces.html"><i class="fa-solid fa-door-open"></i><p class="i18n" data-fr="Votre accès" data-en="Your access"></p></a>
+      <a class="card" href="wifi.html"><i class="fa-solid fa-wifi"></i><p>Wi‑Fi</p></a>
+      <a class="card" href="parking.html"><i class="fa-solid fa-square-parking"></i><p>Parking</p></a>
+      <a class="card" href="code.html"><i class="fa-solid fa-key"></i><p class="i18n" data-fr="Code d’entrée" data-en="Entry code"></p></a>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header">
+      <h2 class="i18n" data-fr="Activités" data-en="Activities"></h2>
+      <a href="activites.html" class="btn i18n" data-fr="Voir plus" data-en="See more"></a>
+    </div>
+    <div class="cards scroll-x">
+      <a class="card" href="restaurants.html"><i class="fa-solid fa-utensils"></i><p class="i18n" data-fr="Restaurants & Bars" data-en="Restaurants & Bars"></p></a>
+      <a class="card" href="plages.html"><i class="fa-solid fa-umbrella-beach"></i><p class="i18n" data-fr="Plages & Loisirs" data-en="Beaches & Leisure"></p></a>
+      <a class="card" href="decouvrir.html"><i class="fa-solid fa-map-location-dot"></i><p class="i18n" data-fr="À découvrir" data-en="To discover"></p></a>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header"><h2 class="i18n" data-fr="Adresse" data-en="Address"></h2></div>
+    <div class="address-box">
+      <p class="i18n" data-fr="xx avenue du Docteur Fabre<br>06160 Juan-les-Pins" data-en="xx avenue du Docteur Fabre<br>06160 Juan-les-Pins"></p>
+      <a href="https://www.google.com/maps/place/xx+avenue+du+Docteur+Fabre+06160+Juan-les-Pins" class="map-btn i18n" target="_blank" data-fr="Voir sur Google Maps" data-en="View on Google Maps"></a>
+    </div>
+  </section>
 </main>
 
   <nav class="bottom-nav">
@@ -37,6 +58,19 @@
   </nav>
 
 <script>
-function setLang(lang){document.querySelectorAll('.i18n').forEach(el=>{el.textContent=el.dataset[lang];});localStorage.setItem('lang',lang);}
+function setLang(lang){document.querySelectorAll('.i18n').forEach(el=>{el.innerHTML=el.dataset[lang];});localStorage.setItem('lang',lang);}
 document.addEventListener('DOMContentLoaded',()=>{setLang(localStorage.getItem('lang')||'fr');});
-</script></body></html>
+
+// Open‑Meteo widget (Juan‑les‑Pins)
+const lat=43.567, lon=7.112;
+function iconFor(code){if([0].includes(code))return"☀️";if([1,2].includes(code))return"🌤️";if([3].includes(code))return"☁️";if([45,48].includes(code))return"🌫️";if([51,53,55,61,63,65,80,81,82].includes(code))return"🌧️";if([71,73,75,85,86].includes(code))return"❄️";if([95,96,99].includes(code))return"⛈️";return"❔";}
+fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&daily=temperature_2m_max,temperature_2m_min,weathercode&timezone=auto`)
+  .then(r=>r.json()).then(d=>{
+    const c=d.current_weather, y=d.daily;
+    let h=`<div class="weather-now"><span class="weather-icon">${iconFor(c.weathercode)}</span><div><h3>${c.temperature}°C</h3><p>Vent ${c.windspeed} km/h</p></div></div><div class="weather-forecast">`;
+    for(let i=0;i<3;i++){const dt=new Date(y.time[i]).toLocaleDateString('fr-FR',{weekday:'short'});
+      h+=`<div class="forecast-day"><span>${dt}</span><span class="weather-icon">${iconFor(y.weathercode[i])}</span><span>${y.temperature_2m_min[i]}° / ${y.temperature_2m_max[i]}°</span></div>`;}
+    h+=`</div>`; document.getElementById("weatherCard").innerHTML=h;
+  }).catch(()=>{document.getElementById("weatherCard").innerHTML='<p>—</p>';});
+</script>
+</body></html>

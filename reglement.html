@@ -1,13 +1,12 @@
 <!DOCTYPE html><html lang="fr"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anaïs</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head><body>
 <header><h1 class="i18n" data-fr="Règlement intérieur" data-en="House rules"></h1></header>
-<main class="content">
-  <p class="i18n" data-fr="Non-fumeur, respect du voisinage, animaux sur demande." data-en="No smoking, respect neighbors, pets on request."></p>
-</main>
+<main class="content"><div class="list"><h3 class="i18n" data-fr="À respecter" data-en="To respect"></h3><ul><li class="i18n" data-fr="Non‑fumeur à l’intérieur" data-en="No smoking inside"></li><li class="i18n" data-fr="Pas de fêtes" data-en="No parties"></li><li class="i18n" data-fr="Calme après 22h" data-en="Quiet after 10pm"></li></ul></div></main>
 
   <nav class="bottom-nav">
     <a href="bienvenue.html"><i class="fa-solid fa-house"></i><span class="i18n" data-fr="Bienvenue" data-en="Welcome"></span></a>
@@ -16,7 +15,7 @@
   </nav>
 
 <script>
-function setLang(lang){document.querySelectorAll('.i18n').forEach(el=>{el.textContent=el.dataset[lang];});localStorage.setItem('lang',lang);}
+function setLang(lang){document.querySelectorAll('.i18n').forEach(el=>{el.innerHTML=el.dataset[lang];});localStorage.setItem('lang',lang);}
 document.addEventListener('DOMContentLoaded',()=>{setLang(localStorage.getItem('lang')||'fr');});
 </script>
 </body></html>
