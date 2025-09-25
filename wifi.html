@@ -1,13 +1,22 @@
-<!DOCTYPE html><html lang='fr'><head>
+<!DOCTYPE html><html lang="fr"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body><header><h1>Wi‑Fi</h1></header><main class='content'><h2>Wi‑Fi</h2><p>Nom du réseau (SSID) : <strong>AnaisGuest</strong></p><p>Mot de passe (code) : <strong>AnaisGuest2025</strong> <!-- placeholder, modifie-le par le vrai --></p><p>Si la connexion pose problème : redémarrer la box (si autorisé) ou contacter l'hôte.</p><hr><div class='small-meta'>English</div><h2>Wi‑Fi</h2><p>Network name (SSID): <strong>AnaisGuest</strong></p><p>Password: <strong>AnaisGuest2025</strong> <!-- placeholder, edit with the real password --></p><p>If issues occur: restart the router (if allowed) or contact the host.</p></main>
+</head><body>
+<header><h1 class="i18n" data-fr="Wi‑Fi" data-en="Wi‑Fi"></h1></header>
+<main class="content">
+  <p class="i18n" data-fr="Nom du réseau : AnaisGuest<br>Mot de passe : AnaisGuest2025" data-en="Network name: AnaisGuest<br>Password: AnaisGuest2025"></p>
+</main>
+
   <nav class="bottom-nav">
-    <a href="bienvenue.html"><i class="fa-solid fa-house"></i><span>Bienvenue</span></a>
-    <a href="asavoir.html"><i class="fa-solid fa-circle-info"></i><span>À savoir</span></a>
-    <a href="activites.html" class="active"><i class="fa-solid fa-map-location-dot"></i><span>Activités</span></a>
+    <a href="bienvenue.html"><i class="fa-solid fa-house"></i><span class="i18n" data-fr="Bienvenue" data-en="Welcome"></span></a>
+    <a href="asavoir.html"><i class="fa-solid fa-circle-info"></i><span class="i18n" data-fr="À savoir" data-en="To know"></span></a>
+    <a href="activites.html"><i class="fa-solid fa-map-location-dot"></i><span class="i18n" data-fr="Activités" data-en="Activities"></span></a>
   </nav>
-<script>function setLang(lang){document.querySelectorAll('.i18n').forEach(el=>{if(el.dataset && el.dataset[lang]) el.textContent = el.dataset[lang];});localStorage.setItem('lang',lang);}document.addEventListener('DOMContentLoaded',()=>setLang(localStorage.getItem('lang')||'fr'));</script></body></html>
+
+<script>
+function setLang(lang){document.querySelectorAll('.i18n').forEach(el=>{el.textContent=el.dataset[lang];});localStorage.setItem('lang',lang);}
+document.addEventListener('DOMContentLoaded',()=>{setLang(localStorage.getItem('lang')||'fr');});
+</script>
+</body></html>

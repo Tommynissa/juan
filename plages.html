@@ -1,13 +1,22 @@
-<!DOCTYPE html><html lang='fr'><head>
+<!DOCTYPE html><html lang="fr"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body><header><h1>Plages & Loisirs</h1></header><main class='content'><h2>Plages & Loisirs</h2><p>Plages publiques et privées. Activités nautiques disponibles : paddle, jet-ski, locations de transats.</p><hr><div class='small-meta'>English</div><h2>Beaches & Leisure</h2><p>Public and private beaches. Water activities: paddle, jet-ski, sunbed rentals.</p></main>
+</head><body>
+<header><h1 class="i18n" data-fr="Plages & Loisirs" data-en="Beaches & Leisure"></h1></header>
+<main class="content">
+  <p class="i18n" data-fr="Plages publiques et privées, paddle, jet-ski." data-en="Public and private beaches, paddle, jet-ski."></p>
+</main>
+
   <nav class="bottom-nav">
-    <a href="bienvenue.html"><i class="fa-solid fa-house"></i><span>Bienvenue</span></a>
-    <a href="asavoir.html"><i class="fa-solid fa-circle-info"></i><span>À savoir</span></a>
-    <a href="activites.html" class="active"><i class="fa-solid fa-map-location-dot"></i><span>Activités</span></a>
+    <a href="bienvenue.html"><i class="fa-solid fa-house"></i><span class="i18n" data-fr="Bienvenue" data-en="Welcome"></span></a>
+    <a href="asavoir.html"><i class="fa-solid fa-circle-info"></i><span class="i18n" data-fr="À savoir" data-en="To know"></span></a>
+    <a href="activites.html"><i class="fa-solid fa-map-location-dot"></i><span class="i18n" data-fr="Activités" data-en="Activities"></span></a>
   </nav>
-<script>function setLang(lang){document.querySelectorAll('.i18n').forEach(el=>{if(el.dataset && el.dataset[lang]) el.textContent = el.dataset[lang];});localStorage.setItem('lang',lang);}document.addEventListener('DOMContentLoaded',()=>setLang(localStorage.getItem('lang')||'fr'));</script></body></html>
+
+<script>
+function setLang(lang){document.querySelectorAll('.i18n').forEach(el=>{el.textContent=el.dataset[lang];});localStorage.setItem('lang',lang);}
+document.addEventListener('DOMContentLoaded',()=>{setLang(localStorage.getItem('lang')||'fr');});
+</script>
+</body></html>
