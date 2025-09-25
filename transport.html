@@ -1,19 +1,31 @@
 <!DOCTYPE html><html lang="fr"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anaïs</title>
+  <title>Transport</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head><body>
-<header><h1 class="i18n" data-fr="Transport" data-en="Transport"></h1></header>
-<main class="content"><div class="list"><h3 class="i18n" data-fr="Se déplacer" data-en="Getting around"></h3><ul><li class="i18n" data-fr="Bus locaux fréquents" data-en="Frequent local buses"></li><li class="i18n" data-fr="Taxis et VTC" data-en="Taxis and rideshares"></li><li class="i18n" data-fr="Gare TER d’Antibes à proximité" data-en="Antibes TER train station nearby"></li></ul></div></main>
+<header>
+  <a href="asavoir.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
+  <h1 class="i18n" data-fr="Transport" data-en="Transport"></h1>
+</header>
+<main class="content">
+  <div class="detail-card">
+    <i class="fa-solid fa-bus"></i>
+    <h2 class="i18n" data-fr="Transport" data-en="Transport"></h2>
+    <ul>
+      <li class="i18n" data-fr="Bus locaux, taxis, vélos" data-en="Local buses, taxis, bikes"></li>
+<li class="i18n" data-fr="Gare TER d’Antibes à proximité" data-en="Antibes TER train station nearby"></li>
+<li class="i18n" data-fr="Applications utiles (SNCF, Uber)" data-en="Useful apps (SNCF, Uber)"></li>
+    </ul>
+  </div>
+</main>
 
   <nav class="bottom-nav">
-    <a href="bienvenue.html"><i class="fa-solid fa-house"></i><span class="i18n" data-fr="Bienvenue" data-en="Welcome"></span></a>
-    <a href="asavoir.html"><i class="fa-solid fa-circle-info"></i><span class="i18n" data-fr="À savoir" data-en="To know"></span></a>
-    <a href="activites.html"><i class="fa-solid fa-map-location-dot"></i><span class="i18n" data-fr="Activités" data-en="Activities"></span></a>
+    <a href="bienvenue.html" class=""><i class="fa-solid fa-house"></i><span class="i18n" data-fr="Bienvenue" data-en="Welcome"></span></a>
+    <a href="asavoir.html" class="active"><i class="fa-solid fa-circle-info"></i><span class="i18n" data-fr="À savoir" data-en="To know"></span></a>
+    <a href="activites.html" class=""><i class="fa-solid fa-map-location-dot"></i><span class="i18n" data-en="Activities" data-fr="Activités"></span></a>
   </nav>
-
 <script>
 function setLang(lang){document.querySelectorAll('.i18n').forEach(el=>{el.innerHTML=el.dataset[lang];});localStorage.setItem('lang',lang);}
 document.addEventListener('DOMContentLoaded',()=>{setLang(localStorage.getItem('lang')||'fr');});

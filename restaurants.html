@@ -1,19 +1,31 @@
 <!DOCTYPE html><html lang="fr"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anaïs</title>
+  <title>Restaurants &amp; Bars</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head><body>
-<header><h1 class="i18n" data-fr="Restaurants &amp; Bars" data-en="Restaurants &amp; Bars"></h1></header>
-<main class="content"><div class="list"><h3 class="i18n" data-fr="Bord de mer" data-en="Seafront"></h3><ul><li class="i18n" data-fr="Restaurants de plage sur le littoral" data-en="Beach restaurants along the shore"></li><li class="i18n" data-fr="Poissons et fruits de mer" data-en="Fish &amp; seafood"></li><li class="i18n" data-fr="Ambiance coucher de soleil" data-en="Sunset atmosphere"></li></ul><h3 class="i18n" data-fr="Cocktails &amp; soirées" data-en="Cocktails &amp; nights"></h3><ul><li class="i18n" data-fr="Bars près de la Pinède" data-en="Bars near the pine park"></li><li class="i18n" data-fr="Musique live en saison" data-en="Live music in season"></li><li class="i18n" data-fr="Terrasses animées" data-en="Lively terraces"></li></ul><h3 class="i18n" data-fr="Conseils pratiques" data-en="Practical tips"></h3><ul><li class="i18n" data-fr="Pensez à réserver en haute saison" data-en="Reserve in high season"></li><li class="i18n" data-fr="Horaires souvent 12h–14h &amp; 19h–22h" data-en="Typical hours 12–2pm &amp; 7–10pm"></li><li class="i18n" data-fr="Pour les groupes, préférez tôt" data-en="For groups, go early"></li></ul></div></main>
+<header>
+  <a href="activites.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
+  <h1 class="i18n" data-fr="Restaurants &amp; Bars" data-en="Restaurants &amp; Bars"></h1>
+</header>
+<main class="content">
+  <div class="detail-card">
+    <i class="fa-solid fa-utensils"></i>
+    <h2 class="i18n" data-fr="Restaurants &amp; Bars" data-en="Restaurants &amp; Bars"></h2>
+    <ul>
+      <li class="i18n" data-fr="Restaurants de plage en bord de mer" data-en="Beach restaurants along the shore"></li>
+<li class="i18n" data-fr="Poissons &amp; fruits de mer" data-en="Fish &amp; seafood"></li>
+<li class="i18n" data-fr="Bars animés près de la Pinède" data-en="Lively bars near the pine park"></li>
+    </ul>
+  </div>
+</main>
 
   <nav class="bottom-nav">
-    <a href="bienvenue.html"><i class="fa-solid fa-house"></i><span class="i18n" data-fr="Bienvenue" data-en="Welcome"></span></a>
-    <a href="asavoir.html"><i class="fa-solid fa-circle-info"></i><span class="i18n" data-fr="À savoir" data-en="To know"></span></a>
-    <a href="activites.html"><i class="fa-solid fa-map-location-dot"></i><span class="i18n" data-fr="Activités" data-en="Activities"></span></a>
+    <a href="bienvenue.html" class=""><i class="fa-solid fa-house"></i><span class="i18n" data-fr="Bienvenue" data-en="Welcome"></span></a>
+    <a href="asavoir.html" class=""><i class="fa-solid fa-circle-info"></i><span class="i18n" data-fr="À savoir" data-en="To know"></span></a>
+    <a href="activites.html" class="active"><i class="fa-solid fa-map-location-dot"></i><span class="i18n" data-en="Activities" data-fr="Activités"></span></a>
   </nav>
-
 <script>
 function setLang(lang){document.querySelectorAll('.i18n').forEach(el=>{el.innerHTML=el.dataset[lang];});localStorage.setItem('lang',lang);}
 document.addEventListener('DOMContentLoaded',()=>{setLang(localStorage.getItem('lang')||'fr');});

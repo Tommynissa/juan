@@ -1,19 +1,31 @@
 <!DOCTYPE html><html lang="fr"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anaïs</title>
+  <title>Déchets &amp; Tri</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head><body>
-<header><h1 class="i18n" data-fr="Déchets &amp; Tri" data-en="Waste &amp; Recycling"></h1></header>
-<main class="content"><div class="list"><h3 class="i18n" data-fr="Tri sélectif" data-en="Sorting"></h3><ul><li class="i18n" data-fr="Verre (bac vert)" data-en="Glass (green bin)"></li><li class="i18n" data-fr="Papier/Carton (bac jaune)" data-en="Paper/Cardboard (yellow bin)"></li><li class="i18n" data-fr="Ordures ménagères (bac gris)" data-en="General waste (grey bin)"></li></ul></div></main>
+<header>
+  <a href="asavoir.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
+  <h1 class="i18n" data-fr="Déchets &amp; Tri" data-en="Waste &amp; Recycling"></h1>
+</header>
+<main class="content">
+  <div class="detail-card">
+    <i class="fa-solid fa-recycle"></i>
+    <h2 class="i18n" data-fr="Déchets &amp; Tri" data-en="Waste &amp; Recycling"></h2>
+    <ul>
+      <li class="i18n" data-fr="Verre (bac vert)" data-en="Glass (green bin)"></li>
+<li class="i18n" data-fr="Papier/Carton (bac jaune)" data-en="Paper/Cardboard (yellow bin)"></li>
+<li class="i18n" data-fr="Ordures ménagères (bac gris)" data-en="General waste (grey bin)"></li>
+    </ul>
+  </div>
+</main>
 
   <nav class="bottom-nav">
-    <a href="bienvenue.html"><i class="fa-solid fa-house"></i><span class="i18n" data-fr="Bienvenue" data-en="Welcome"></span></a>
-    <a href="asavoir.html"><i class="fa-solid fa-circle-info"></i><span class="i18n" data-fr="À savoir" data-en="To know"></span></a>
-    <a href="activites.html"><i class="fa-solid fa-map-location-dot"></i><span class="i18n" data-fr="Activités" data-en="Activities"></span></a>
+    <a href="bienvenue.html" class=""><i class="fa-solid fa-house"></i><span class="i18n" data-fr="Bienvenue" data-en="Welcome"></span></a>
+    <a href="asavoir.html" class="active"><i class="fa-solid fa-circle-info"></i><span class="i18n" data-fr="À savoir" data-en="To know"></span></a>
+    <a href="activites.html" class=""><i class="fa-solid fa-map-location-dot"></i><span class="i18n" data-en="Activities" data-fr="Activités"></span></a>
   </nav>
-
 <script>
 function setLang(lang){document.querySelectorAll('.i18n').forEach(el=>{el.innerHTML=el.dataset[lang];});localStorage.setItem('lang',lang);}
 document.addEventListener('DOMContentLoaded',()=>{setLang(localStorage.getItem('lang')||'fr');});

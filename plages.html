@@ -1,19 +1,31 @@
 <!DOCTYPE html><html lang="fr"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anaïs</title>
+  <title>Plages &amp; Loisirs</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head><body>
-<header><h1 class="i18n" data-fr="Plages &amp; Loisirs" data-en="Beaches &amp; Leisure"></h1></header>
-<main class="content"><div class="list"><h3 class="i18n" data-fr="Plages publiques" data-en="Public beaches"></h3><ul><li class="i18n" data-fr="Sable fin en centre de Juan" data-en="Fine sand in central Juan"></li><li class="i18n" data-fr="Zones familiales en pente douce" data-en="Family-friendly gentle slope"></li><li class="i18n" data-fr="Douches et accès faciles" data-en="Showers and easy access"></li></ul><h3 class="i18n" data-fr="Plages privées" data-en="Private beaches"></h3><ul><li class="i18n" data-fr="Transats &amp; parasols à la journée" data-en="Sunbeds &amp; umbrellas for the day"></li><li class="i18n" data-fr="Restaurants pieds dans le sable" data-en="Restaurants on the sand"></li><li class="i18n" data-fr="Ambiance plus calme" data-en="Quieter vibe"></li></ul><h3 class="i18n" data-fr="Loisirs nautiques" data-en="Water activities"></h3><ul><li class="i18n" data-fr="Paddle &amp; kayak" data-en="Paddle &amp; kayak"></li><li class="i18n" data-fr="Bouées tractées &amp; jet-ski (encadré)" data-en="Towed buoys &amp; jet-ski (supervised)"></li><li class="i18n" data-fr="Bateaux navettes en saison" data-en="Seasonal shuttle boats"></li></ul></div></main>
+<header>
+  <a href="activites.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
+  <h1 class="i18n" data-fr="Plages &amp; Loisirs" data-en="Beaches &amp; Leisure"></h1>
+</header>
+<main class="content">
+  <div class="detail-card">
+    <i class="fa-solid fa-umbrella-beach"></i>
+    <h2 class="i18n" data-fr="Plages &amp; Loisirs" data-en="Beaches &amp; Leisure"></h2>
+    <ul>
+      <li class="i18n" data-fr="Plages publiques (sable fin)" data-en="Public beaches (fine sand)"></li>
+<li class="i18n" data-fr="Plages privées (transats &amp; parasols)" data-en="Private beaches (sunbeds &amp; umbrellas)"></li>
+<li class="i18n" data-fr="Paddle, kayak, bouées tractées" data-en="Paddle, kayak, towed buoys"></li>
+    </ul>
+  </div>
+</main>
 
   <nav class="bottom-nav">
-    <a href="bienvenue.html"><i class="fa-solid fa-house"></i><span class="i18n" data-fr="Bienvenue" data-en="Welcome"></span></a>
-    <a href="asavoir.html"><i class="fa-solid fa-circle-info"></i><span class="i18n" data-fr="À savoir" data-en="To know"></span></a>
-    <a href="activites.html"><i class="fa-solid fa-map-location-dot"></i><span class="i18n" data-fr="Activités" data-en="Activities"></span></a>
+    <a href="bienvenue.html" class=""><i class="fa-solid fa-house"></i><span class="i18n" data-fr="Bienvenue" data-en="Welcome"></span></a>
+    <a href="asavoir.html" class=""><i class="fa-solid fa-circle-info"></i><span class="i18n" data-fr="À savoir" data-en="To know"></span></a>
+    <a href="activites.html" class="active"><i class="fa-solid fa-map-location-dot"></i><span class="i18n" data-en="Activities" data-fr="Activités"></span></a>
   </nav>
-
 <script>
 function setLang(lang){document.querySelectorAll('.i18n').forEach(el=>{el.innerHTML=el.dataset[lang];});localStorage.setItem('lang',lang);}
 document.addEventListener('DOMContentLoaded',()=>{setLang(localStorage.getItem('lang')||'fr');});
