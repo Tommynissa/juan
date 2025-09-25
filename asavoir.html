@@ -1,53 +1,24 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
+<!DOCTYPE html><html lang="fr"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>À savoir</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <header>
-    <h1 class="i18n" data-fr="À savoir" data-en="Good to know"></h1>
-  </header>
 
-  <main>
-    <section>
-      <p class="i18n"
-         data-fr="Voici toutes les informations essentielles pour profiter pleinement de votre séjour : accès, connexion Wi-Fi, équipements disponibles, règles de la maison, urgences, gestion des déchets et transports."
-         data-en="Here are all the essential details to fully enjoy your stay: access, Wi-Fi connection, available equipment, house rules, emergencies, waste management and transport.">
-      </p>
-    </section>
-
-    <section class="cards vertical fullwidth">
-      <div class="card"><i class="fa-solid fa-door-open"></i><p class="i18n" data-fr="Votre accès" data-en="Your access"></p></div>
-      <div class="card"><i class="fa-solid fa-wifi"></i><p class="i18n" data-fr="Wi-Fi" data-en="Wi-Fi"></p></div>
-      <div class="card"><i class="fa-solid fa-couch"></i><p class="i18n" data-fr="Équipement" data-en="Equipment"></p></div>
-      <div class="card"><i class="fa-solid fa-scroll"></i><p class="i18n" data-fr="Règlement intérieur" data-en="House rules"></p></div>
-      <div class="card"><i class="fa-solid fa-triangle-exclamation"></i><p class="i18n" data-fr="Urgence" data-en="Emergency"></p></div>
-      <div class="card"><i class="fa-solid fa-recycle"></i><p class="i18n" data-fr="Déchets & Tri" data-en="Waste & Recycling"></p></div>
-      <div class="card"><i class="fa-solid fa-bus"></i><p class="i18n" data-fr="Transport" data-en="Transport"></p></div>
-    </section>
-  </main>
-
+<body><header><h1>À savoir</h1></header><main class="content">
+<p>Voici les informations détaillées. Cliquez sur une carte pour plus de détails.</p>
+<section class="cards vertical fullwidth">
+  <a class="card" href="acces.html"><i class="fa-solid fa-door-open"></i><p>Votre accès</p></a>
+  <a class="card" href="wifi.html"><i class="fa-solid fa-wifi"></i><p>Wi‑Fi</p></a>
+  <a class="card" href="equipement.html"><i class="fa-solid fa-couch"></i><p>Équipement</p></a>
+  <a class="card" href="reglement.html"><i class="fa-solid fa-scroll"></i><p>Règlement intérieur</p></a>
+  <a class="card" href="urgence.html"><i class="fa-solid fa-triangle-exclamation"></i><p>Urgence</p></a>
+  <a class="card" href="dechets.html"><i class="fa-solid fa-recycle"></i><p>Déchets & Tri</p></a>
+  <a class="card" href="transport.html"><i class="fa-solid fa-bus"></i><p>Transport</p></a>
+</section></main>
   <nav class="bottom-nav">
-    <a href="bienvenue.html"><i class="fa-solid fa-house"></i><span class="i18n" data-fr="Bienvenue" data-en="Welcome"></span></a>
-    <a href="asavoir.html" class="active"><i class="fa-solid fa-circle-info"></i><span class="i18n" data-fr="À savoir" data-en="To know"></span></a>
-    <a href="activites.html"><i class="fa-solid fa-map-location-dot"></i><span class="i18n" data-fr="Activités" data-en="Activities"></span></a>
+    <a href="bienvenue.html"><i class="fa-solid fa-house"></i><span>Bienvenue</span></a>
+    <a href="asavoir.html"><i class="fa-solid fa-circle-info"></i><span>À savoir</span></a>
+    <a href="activites.html" class="active"><i class="fa-solid fa-map-location-dot"></i><span>Activités</span></a>
   </nav>
-
-  <script>
-  function setLang(lang) {
-    document.querySelectorAll('.i18n').forEach(el => {
-      el.textContent = el.dataset[lang];
-    });
-    localStorage.setItem("lang", lang);
-  }
-  document.addEventListener("DOMContentLoaded", () => {
-    const savedLang = localStorage.getItem("lang") || "fr";
-    setLang(savedLang);
-  });
-  </script>
-</body>
-</html>
+</body></html>
