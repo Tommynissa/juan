@@ -181,7 +181,7 @@ main {
   scroll-snap-align: start;
 }
 
-/* Colonne (À savoir / Activités) */
+/* Colonne (À savoir / Activités) centrées fullwidth */
 .cards.vertical {
   display: flex;
   flex-direction: column;
@@ -189,12 +189,13 @@ main {
   padding: 1rem;
 }
 .cards.vertical.fullwidth {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  padding-left: 1rem;
-  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
+  width: 100%;
+  max-width: 800px;  /* largeur max centrée */
+  margin: 0 auto;
+  padding: 1rem;
 }
 .cards.vertical.fullwidth .card {
   width: 100%;
@@ -286,13 +287,6 @@ main {
   margin: .5rem 0;
 }
 .detail-card li { margin: .3rem 0; }
-
-@media (min-width: 1024px) {
-  .cards.vertical.fullwidth {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
 
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto; }
