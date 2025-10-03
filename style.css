@@ -290,6 +290,40 @@ main {
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto; }
 }
+/* Style pour les cartes des pages listes (asavoir, activites) */
+.card-link {
+  text-decoration: none;
+}
+
+.detail-card.list-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+
+.detail-card.list-item:hover {
+  transform: translateY(-3px);
+  background: var(--accent);
+  color: white;
+}
+
+.detail-card.list-item i {
+  margin-bottom: 0;
+}
+
+.detail-card.list-item p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.detail-card.list-item:hover p,
+.detail-card.list-item:hover i {
+  color: white;
+}
 
 
 
