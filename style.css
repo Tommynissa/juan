@@ -290,3 +290,29 @@ main {
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto; }
 }
+/* Nouvelles règles pour les cartes pleine largeur */
+.page-asavoir .content,
+.page-activites .content {
+  /* On supprime le padding horizontal du conteneur principal sur ces pages */
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.cards.vertical.fullwidth {
+  /* On supprime l'espacement autour et entre les cartes */
+  padding: 0;
+  gap: 0;
+}
+
+.cards.vertical.fullwidth .card {
+  /* On supprime les coins arrondis pour qu'elles s'affichent bord à bord */
+  border-radius: 0;
+  /* On ajoute une bordure fine en bas pour séparer les cartes */
+  border-bottom: 1px solid var(--sep);
+  box-shadow: none; /* On peut enlever l'ombre pour un look plus épuré */
+}
+
+/* On supprime la bordure de la toute dernière carte pour que ce soit plus joli */
+.cards.vertical.fullwidth .card:last-child {
+  border-bottom: none;
+}
