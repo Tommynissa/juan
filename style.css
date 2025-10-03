@@ -181,7 +181,7 @@ main {
   scroll-snap-align: start;
 }
 
-/* Colonne (À savoir / Activités) pleine largeur */
+/* Colonne (À savoir / Activités) pleine largeur - ANCIEN STYLE NON UTILISÉ */
 .cards.vertical {
   display: flex;
   flex-direction: column;
@@ -290,6 +290,7 @@ main {
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto; }
 }
+
 /* Style pour les cartes des pages listes (asavoir, activites) */
 .card-link {
   text-decoration: none;
@@ -305,8 +306,6 @@ main {
 
 .detail-card.list-item:hover {
   transform: translateY(-3px);
-  background: var(--accent);
-  color: white;
 }
 
 .detail-card.list-item i {
@@ -318,9 +317,4 @@ main {
   font-size: 1.1rem;
   font-weight: 500;
   color: var(--ink);
-}
-
-.detail-card.list-item:hover p,
-.detail-card.list-item:hover i {
-  color: white;
 }
