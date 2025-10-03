@@ -10,6 +10,7 @@
 * { box-sizing: border-box; }
 
 html, body {
+background-color: red !important; /* AJOUTEZ JUSTE CETTE LIGNE POUR LE TEST */
   height: 100%;
   margin: 0;
   background: var(--bg);
@@ -296,5 +297,6 @@ main {
   padding-left: 0;
   padding-right: 0;
 }
+
 
 
