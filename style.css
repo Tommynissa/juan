@@ -290,6 +290,7 @@ main {
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto; }
 }
+
 /* Correction finale pour la largeur des cartes (asavoir & activites) */
 .cards.vertical.fullwidth {
   padding-left: 0;
