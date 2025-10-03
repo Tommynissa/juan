@@ -3,33 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arrivée</title>
+  <title>À savoir</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-<header>
-  <a href="asavoir.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
-  <h1 class="i18n" data-fr="Arrivée" data-en="Arrival"></h1>
-</header>
+<header><h1 class="i18n" data-fr="À savoir" data-en="Good to know"></h1></header>
+
 <main class="content">
-  <div class="detail-card">
-    <img src="arrivee.jpg" alt="Illustration de l'arrivée" style="width:120px; height: auto; margin: 0 auto 1.5rem; display: block;">
-    <h2 class="i18n" data-fr="Instructions d'arrivée" data-en="Arrival instructions"></h2>
-    <ul>
-      <li class="i18n" data-fr="Heure d'arrivée : à partir de 15h00" data-en="Check-in time: from 3:00 PM"></li>
-      <li class="i18n" data-fr="La procédure est autonome avec une boîte à clés." data-en="Self check-in with a lockbox."></li>
-      <li class="i18n" data-fr="Le code d'accès vous a été envoyé séparément." data-en="The access code has been sent to you separately."></li>
-    </ul>
-  </div>
+  <a href="arrivee.html" class="card-link">
+    <div class="detail-card list-item">
+      <i class="fa-solid fa-person-walking-luggage"></i>
+      <p class="i18n" data-fr="Arrivée" data-en="Arrival"></p>
+    </div>
+  </a>
+
+  <a href="depart.html" class="card-link">
+    <div class="detail-card list-item">
+      <i class="fa-solid fa-person-walking-arrow-right"></i>
+      <p class="i18n" data-fr="Départ" data-en="Departure"></p>
+    </div>
+  </a>
+
+  <a href="wifi.html" class="card-link">
+    <div class="detail-card list-item">
+      <i class="fa-solid fa-wifi"></i>
+      <p>Wi‑Fi</p>
+    </div>
+  </a>
+
+  <a href="equipement.html" class="card-link">
+    <div class="detail-card list-item">
+      <i class="fa-solid fa-couch"></i>
+      <p class="i18n" data-fr="Équipement" data-en="Equipment"></p>
+    </div>
+  </a>
+
+  <a href="reglement.html" class="card-link">
+    <div class="detail-card list-item">
+      <i class="fa-solid fa-scroll"></i>
+      <p class="i18n" data-fr="Règlement intérieur" data-en="House rules"></p>
+    </div>
+  </a>
+
+  <a href="urgence.html" class="card-link">
+    <div class="detail-card list-item">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+      <p class="i18n" data-fr="Urgence" data-en="Emergency"></p>
+    </div>
+  </a>
+
+  <a href="dechets.html" class="card-link">
+    <div class="detail-card list-item">
+      <i class="fa-solid fa-recycle"></i>
+      <p class="i18n" data-fr="Déchets & Tri" data-en="Waste & Recycling"></p>
+    </div>
+  </a>
+
+  <a href="transport.html" class="card-link">
+    <div class="detail-card list-item">
+      <i class="fa-solid fa-bus"></i>
+      <p>Transport</p>
+    </div>
+  </a>
+
 </main>
+
 <nav class="bottom-nav">
   <a href="bienvenue.html"><i class="fa-solid fa-house"></i><span class="i18n" data-fr="Bienvenue" data-en="Welcome"></span></a>
   <a href="asavoir.html" class="active"><i class="fa-solid fa-circle-info"></i><span class="i18n" data-fr="À savoir" data-en="To know"></span></a>
   <a href="activites.html"><i class="fa-solid fa-map-location-dot"></i><span class="i18n" data-fr="Activités" data-en="Activities"></span></a>
 </nav>
+
 <script>
-function setLang(lang){document.querySelectorAll('.i18n').forEach(el=>{el.innerHTML=el.dataset[lang];});localStorage.setItem('lang',lang);}
+function setLang(lang){
+  document.querySelectorAll('.i18n').forEach(el=>{el.innerHTML=el.dataset[lang];});
+  localStorage.setItem('lang',lang);
+}
 document.addEventListener('DOMContentLoaded',()=>{setLang(localStorage.getItem('lang')||'fr');});
 </script>
 </body>
