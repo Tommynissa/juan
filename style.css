@@ -290,18 +290,8 @@ main {
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto; }
 }
-/* Règles finales pour les cartes pleine largeur (asavoir & activites) */
-.page-asavoir .content,
-.page-activites .content {
-  /* On supprime la largeur maximale pour que le conteneur prenne 100% de la largeur */
-  max-width: none !important;
-  /* On supprime le padding horizontal pour que le conteneur aille bord à bord */
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
+/* Correction finale pour la largeur des cartes (asavoir & activites) */
 .cards.vertical.fullwidth {
-  /* On applique un padding ici pour que les cartes ne touchent pas le bord de l'écran */
-  padding: 1rem;
-  gap: 1rem;
+  padding-left: 0;
+  padding-right: 0;
 }
