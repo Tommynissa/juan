@@ -291,18 +291,7 @@ main {
   * { transition: none !important; scroll-behavior: auto; }
 }
 
-/* RÈGLE FINALE ET FORCÉE pour la largeur des cartes */
-body.page-asavoir .content,
-body.page-activites .content {
-  max-width: 100% !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
 
-body.page-asavoir .cards.vertical.fullwidth,
-body.page-activites .cards.vertical.fullwidth {
-  padding: 1rem !important;
-  gap: 1rem !important;
-}
+
 
 
