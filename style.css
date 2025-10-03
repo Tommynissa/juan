@@ -294,10 +294,10 @@ main {
 .page-asavoir .content,
 .page-activites .content {
   /* On supprime la largeur maximale pour que le conteneur prenne 100% de la largeur */
-  max-width: none;
+  max-width: none !important;
   /* On supprime le padding horizontal pour que le conteneur aille bord à bord */
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .cards.vertical.fullwidth {
