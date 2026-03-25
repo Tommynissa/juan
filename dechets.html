@@ -1,34 +1,67 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Déchets</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Déchets & tri</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
 <header>
-<a href="asavoir.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
-<h1 class="i18n" data-fr="Déchets" data-en="Déchets">Déchets</h1>
+  <div class="header-inner">
+    <a class="back-btn" href="asavoir.html"><i class="fa-solid fa-arrow-left"></i></a>
+    <h1>Déchets & tri</h1>
+  </div>
 </header>
-<main class="content fullwidth">
 
-<p class="intro-text">Déchets</p>
-<div class="place"><div class="body"><h3>Déchets</h3><p>Contenu à personnaliser.</p></div></div>
+<main class="content">
+  <p class="intro">
+    Merci de contribuer au bon entretien du logement et au respect de l’environnement.
+  </p>
 
+  <div class="full-list">
+    <div class="card-block">
+      <div class="icon-wrap"><i class="fa-solid fa-trash"></i></div>
+      <div>
+        <h3>Ordures ménagères</h3>
+        <p>Déposez-les dans le bac prévu à cet effet, bien fermées dans des sacs.</p>
+      </div>
+    </div>
+
+    <div class="card-block">
+      <div class="icon-wrap"><i class="fa-solid fa-recycle"></i></div>
+      <div>
+        <h3>Tri sélectif</h3>
+        <p>Séparez papier, carton, verre et plastique lorsque cela est possible.</p>
+      </div>
+    </div>
+
+    <div class="card-block">
+      <div class="icon-wrap"><i class="fa-solid fa-broom"></i></div>
+      <div>
+        <h3>Avant votre départ</h3>
+        <p>Merci de vider les poubelles principales avant votre départ.</p>
+      </div>
+    </div>
+  </div>
 </main>
-<nav class="bottom-nav">
-<a href="bienvenue.html" class=""><i class="fa-solid fa-house"></i><span class="i18n" data-fr="Accueil" data-en="Home">Accueil</span></a>
-<a href="asavoir.html" class="active"><i class="fa-solid fa-circle-info"></i><span class="i18n" data-fr="À savoir" data-en="Info">À savoir</span></a>
-<a href="activites.html" class=""><i class="fa-solid fa-compass"></i><span class="i18n" data-fr="Activités" data-en="Activities">Activités</span></a>
-</nav>
 
-<script>
-const elements = document.querySelectorAll('.i18n');
-function setLang(lang){ elements.forEach(el=>{ if(el.dataset && el.dataset[lang]) el.innerText = el.dataset[lang]; }); }
-setLang('fr');
-</script>
+<nav class="bottom-nav">
+  <a href="index.html">
+    <i class="fa-solid fa-house"></i>
+    <span>Accueil</span>
+  </a>
+  <a href="asavoir.html" class="active">
+    <i class="fa-solid fa-circle-info"></i>
+    <span>À savoir</span>
+  </a>
+  <a href="activites.html">
+    <i class="fa-solid fa-compass"></i>
+    <span>Activités</span>
+  </a>
+</nav>
 
 </body>
 </html>
