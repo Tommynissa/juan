@@ -1,36 +1,68 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Plages</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plages & Loisirs</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
 <header>
-<a href="activites.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
-<h1 class="i18n" data-fr="Plages" data-en="Plages">Plages</h1>
+  <div class="header-inner">
+    <a class="back-btn" href="activites.html"><i class="fa-solid fa-arrow-left"></i></a>
+    <h1>Plages & Loisirs</h1>
+  </div>
 </header>
-<main class="content fullwidth">
 
-<p class="intro-text">Plages</p>
-<div class="place"><img src="img_placeholder.svg"><div class="body"><h3>Plages 1</h3><p>Description.</p></div></div>
-<div class="place"><img src="img_placeholder.svg"><div class="body"><h3>Plages 2</h3><p>Description.</p></div></div>
-<div class="place"><img src="img_placeholder.svg"><div class="body"><h3>Plages 3</h3><p>Description.</p></div></div>
+<main class="content">
+  <p class="intro">
+    Sélection de trois belles adresses pour profiter pleinement de la région.
+  </p>
 
+  <article class="place">
+    <img src="placeholder.svg" alt="Plage de la Salis">
+    <div class="body">
+      <h3>Plage de la Salis</h3>
+      <a class="addr" href="https://maps.google.com" target="_blank">Bd James Wyllie, Antibes</a>
+      <p>Grande plage familiale au sable fin, idéale pour une baignade agréable.</p>
+    </div>
+  </article>
+
+  <article class="place">
+    <img src="placeholder.svg" alt="Plage Keller">
+    <div class="body">
+      <h3>Plage Keller</h3>
+      <a class="addr" href="https://maps.google.com" target="_blank">1035 Chem. des Douaniers, Antibes</a>
+      <p>Plage privée haut de gamme, réputée pour son cadre raffiné.</p>
+    </div>
+  </article>
+
+  <article class="place">
+    <img src="placeholder.svg" alt="Water Sports Juan">
+    <div class="body">
+      <h3>Water Sports Juan</h3>
+      <a class="addr" href="https://maps.google.com" target="_blank">Promenade du Soleil, Juan-les-Pins</a>
+      <p>Paddle, kayak et autres activités nautiques à proximité immédiate.</p>
+    </div>
+  </article>
 </main>
-<nav class="bottom-nav">
-<a href="bienvenue.html" class=""><i class="fa-solid fa-house"></i><span class="i18n" data-fr="Accueil" data-en="Home">Accueil</span></a>
-<a href="asavoir.html" class=""><i class="fa-solid fa-circle-info"></i><span class="i18n" data-fr="À savoir" data-en="Info">À savoir</span></a>
-<a href="activites.html" class="active"><i class="fa-solid fa-compass"></i><span class="i18n" data-fr="Activités" data-en="Activities">Activités</span></a>
-</nav>
 
-<script>
-const elements = document.querySelectorAll('.i18n');
-function setLang(lang){ elements.forEach(el=>{ if(el.dataset && el.dataset[lang]) el.innerText = el.dataset[lang]; }); }
-setLang('fr');
-</script>
+<nav class="bottom-nav">
+  <a href="index.html">
+    <i class="fa-solid fa-house"></i>
+    <span>Accueil</span>
+  </a>
+  <a href="asavoir.html">
+    <i class="fa-solid fa-circle-info"></i>
+    <span>À savoir</span>
+  </a>
+  <a href="activites.html" class="active">
+    <i class="fa-solid fa-compass"></i>
+    <span>Activités</span>
+  </a>
+</nav>
 
 </body>
 </html>
