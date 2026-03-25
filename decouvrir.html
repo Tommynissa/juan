@@ -1,36 +1,68 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Découvrir</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À découvrir</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
 <header>
-<a href="activites.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
-<h1 class="i18n" data-fr="Découvrir" data-en="Découvrir">Découvrir</h1>
+  <div class="header-inner">
+    <a class="back-btn" href="activites.html"><i class="fa-solid fa-arrow-left"></i></a>
+    <h1>À découvrir</h1>
+  </div>
 </header>
-<main class="content fullwidth">
 
-<p class="intro-text">Découvrir</p>
-<div class="place"><img src="img_placeholder.svg"><div class="body"><h3>Découvrir 1</h3><p>Description.</p></div></div>
-<div class="place"><img src="img_placeholder.svg"><div class="body"><h3>Découvrir 2</h3><p>Description.</p></div></div>
-<div class="place"><img src="img_placeholder.svg"><div class="body"><h3>Découvrir 3</h3><p>Description.</p></div></div>
+<main class="content">
+  <p class="intro">
+    Sélection de trois belles adresses pour profiter pleinement de la région.
+  </p>
 
+  <article class="place">
+    <img src="placeholder.svg" alt="Vieil Antibes">
+    <div class="body">
+      <h3>Vieil Antibes</h3>
+      <a class="addr" href="https://maps.google.com" target="_blank">Centre historique, Antibes</a>
+      <p>Charmantes ruelles pavées, marchés provençaux et remparts face à la mer.</p>
+    </div>
+  </article>
+
+  <article class="place">
+    <img src="placeholder.svg" alt="Cap d’Antibes">
+    <div class="body">
+      <h3>Cap d’Antibes</h3>
+      <a class="addr" href="https://maps.google.com" target="_blank">Sentier du Littoral, Antibes</a>
+      <p>Un des plus beaux sentiers côtiers de la Côte d’Azur.</p>
+    </div>
+  </article>
+
+  <article class="place">
+    <img src="placeholder.svg" alt="Cannes – La Croisette">
+    <div class="body">
+      <h3>Cannes – La Croisette</h3>
+      <a class="addr" href="https://maps.google.com" target="_blank">Boulevard de la Croisette, Cannes</a>
+      <p>À seulement quelques minutes, découvrez la célèbre Croisette.</p>
+    </div>
+  </article>
 </main>
-<nav class="bottom-nav">
-<a href="bienvenue.html" class=""><i class="fa-solid fa-house"></i><span class="i18n" data-fr="Accueil" data-en="Home">Accueil</span></a>
-<a href="asavoir.html" class=""><i class="fa-solid fa-circle-info"></i><span class="i18n" data-fr="À savoir" data-en="Info">À savoir</span></a>
-<a href="activites.html" class="active"><i class="fa-solid fa-compass"></i><span class="i18n" data-fr="Activités" data-en="Activities">Activités</span></a>
-</nav>
 
-<script>
-const elements = document.querySelectorAll('.i18n');
-function setLang(lang){ elements.forEach(el=>{ if(el.dataset && el.dataset[lang]) el.innerText = el.dataset[lang]; }); }
-setLang('fr');
-</script>
+<nav class="bottom-nav">
+  <a href="index.html">
+    <i class="fa-solid fa-house"></i>
+    <span>Accueil</span>
+  </a>
+  <a href="asavoir.html">
+    <i class="fa-solid fa-circle-info"></i>
+    <span>À savoir</span>
+  </a>
+  <a href="activites.html" class="active">
+    <i class="fa-solid fa-compass"></i>
+    <span>Activités</span>
+  </a>
+</nav>
 
 </body>
 </html>
