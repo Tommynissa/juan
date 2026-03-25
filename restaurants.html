@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurants</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<header>
+<a href="activites.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
+<h1 class="i18n" data-fr="Restaurants" data-en="Restaurants">Restaurants</h1>
+</header>
+<main class="content fullwidth">
+
+<p class="intro-text">Restaurants</p>
+<div class="place"><img src="img_placeholder.svg"><div class="body"><h3>Restaurants 1</h3><p>Description.</p></div></div>
+<div class="place"><img src="img_placeholder.svg"><div class="body"><h3>Restaurants 2</h3><p>Description.</p></div></div>
+<div class="place"><img src="img_placeholder.svg"><div class="body"><h3>Restaurants 3</h3><p>Description.</p></div></div>
+
+</main>
+<nav class="bottom-nav">
+<a href="bienvenue.html" class=""><i class="fa-solid fa-house"></i><span class="i18n" data-fr="Accueil" data-en="Home">Accueil</span></a>
+<a href="asavoir.html" class=""><i class="fa-solid fa-circle-info"></i><span class="i18n" data-fr="À savoir" data-en="Info">À savoir</span></a>
+<a href="activites.html" class="active"><i class="fa-solid fa-compass"></i><span class="i18n" data-fr="Activités" data-en="Activities">Activités</span></a>
+</nav>
+
+<script>
+const elements = document.querySelectorAll('.i18n');
+function setLang(lang){ elements.forEach(el=>{ if(el.dataset && el.dataset[lang]) el.innerText = el.dataset[lang]; }); }
+setLang('fr');
+</script>
+
+</body>
+</html>
