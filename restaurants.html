@@ -1,36 +1,68 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Restaurants</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurants & Bars</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
 <header>
-<a href="activites.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
-<h1 class="i18n" data-fr="Restaurants" data-en="Restaurants">Restaurants</h1>
+  <div class="header-inner">
+    <a class="back-btn" href="activites.html"><i class="fa-solid fa-arrow-left"></i></a>
+    <h1>Restaurants & Bars</h1>
+  </div>
 </header>
-<main class="content fullwidth">
 
-<p class="intro-text">Restaurants</p>
-<div class="place"><img src="img_placeholder.svg"><div class="body"><h3>Restaurants 1</h3><p>Description.</p></div></div>
-<div class="place"><img src="img_placeholder.svg"><div class="body"><h3>Restaurants 2</h3><p>Description.</p></div></div>
-<div class="place"><img src="img_placeholder.svg"><div class="body"><h3>Restaurants 3</h3><p>Description.</p></div></div>
+<main class="content">
+  <p class="intro">
+    Sélection de trois belles adresses pour profiter pleinement de la région.
+  </p>
 
+  <article class="place">
+    <img src="placeholder.svg" alt="Le Crystal">
+    <div class="body">
+      <h3>Le Crystal</h3>
+      <a class="addr" href="https://maps.google.com" target="_blank">5 Bd Eugène Gazagnaire, Juan-les-Pins</a>
+      <p>Institution de Juan-les-Pins, idéale pour un dîner méditerranéen face à la mer.</p>
+    </div>
+  </article>
+
+  <article class="place">
+    <img src="placeholder.svg" alt="Pam Pam Bar">
+    <div class="body">
+      <h3>Pam Pam Bar</h3>
+      <a class="addr" href="https://maps.google.com" target="_blank">137 Bd Président Wilson, Juan-les-Pins</a>
+      <p>Lieu emblématique pour sortir le soir, avec ambiance festive, cocktails exotiques et musique live.</p>
+    </div>
+  </article>
+
+  <article class="place">
+    <img src="placeholder.svg" alt="Helios Plage">
+    <div class="body">
+      <h3>Helios Plage</h3>
+      <a class="addr" href="https://maps.google.com" target="_blank">Promenade du Soleil, Juan-les-Pins</a>
+      <p>Restaurant de plage élégant avec transats et cuisine méditerranéenne fraîche.</p>
+    </div>
+  </article>
 </main>
-<nav class="bottom-nav">
-<a href="bienvenue.html" class=""><i class="fa-solid fa-house"></i><span class="i18n" data-fr="Accueil" data-en="Home">Accueil</span></a>
-<a href="asavoir.html" class=""><i class="fa-solid fa-circle-info"></i><span class="i18n" data-fr="À savoir" data-en="Info">À savoir</span></a>
-<a href="activites.html" class="active"><i class="fa-solid fa-compass"></i><span class="i18n" data-fr="Activités" data-en="Activities">Activités</span></a>
-</nav>
 
-<script>
-const elements = document.querySelectorAll('.i18n');
-function setLang(lang){ elements.forEach(el=>{ if(el.dataset && el.dataset[lang]) el.innerText = el.dataset[lang]; }); }
-setLang('fr');
-</script>
+<nav class="bottom-nav">
+  <a href="index.html">
+    <i class="fa-solid fa-house"></i>
+    <span>Accueil</span>
+  </a>
+  <a href="asavoir.html">
+    <i class="fa-solid fa-circle-info"></i>
+    <span>À savoir</span>
+  </a>
+  <a href="activites.html" class="active">
+    <i class="fa-solid fa-compass"></i>
+    <span>Activités</span>
+  </a>
+</nav>
 
 </body>
 </html>
