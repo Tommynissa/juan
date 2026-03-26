@@ -1,34 +1,67 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Équipement</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Équipement</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
 <header>
-<a href="asavoir.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
-<h1 class="i18n" data-fr="Équipement" data-en="Équipement">Équipement</h1>
+  <div class="header-inner">
+    <a class="back-btn" href="asavoir.html"><i class="fa-solid fa-arrow-left"></i></a>
+    <h1>Équipement</h1>
+  </div>
 </header>
-<main class="content fullwidth">
 
-<p class="intro-text">Équipement</p>
-<div class="place"><div class="body"><h3>Équipement</h3><p>Contenu à personnaliser.</p></div></div>
+<main class="content">
+  <p class="intro">
+    L’appartement a été pensé pour vous offrir un séjour confortable et pratique.
+  </p>
 
+  <div class="full-list">
+    <div class="card-block">
+      <div class="icon-wrap"><i class="fa-solid fa-kitchen-set"></i></div>
+      <div>
+        <h3>Cuisine équipée</h3>
+        <p>Plaques, micro-ondes, réfrigérateur, vaisselle et ustensiles du quotidien.</p>
+      </div>
+    </div>
+
+    <div class="card-block">
+      <div class="icon-wrap"><i class="fa-solid fa-bed"></i></div>
+      <div>
+        <h3>Confort</h3>
+        <p>Literie confortable, espace salon agréable et coin repas.</p>
+      </div>
+    </div>
+
+    <div class="card-block">
+      <div class="icon-wrap"><i class="fa-solid fa-tv"></i></div>
+      <div>
+        <h3>Équipements pratiques</h3>
+        <p>Télévision, Wi-Fi, climatisation/chauffage selon saison et rangements.</p>
+      </div>
+    </div>
+  </div>
 </main>
-<nav class="bottom-nav">
-<a href="bienvenue.html" class=""><i class="fa-solid fa-house"></i><span class="i18n" data-fr="Accueil" data-en="Home">Accueil</span></a>
-<a href="asavoir.html" class="active"><i class="fa-solid fa-circle-info"></i><span class="i18n" data-fr="À savoir" data-en="Info">À savoir</span></a>
-<a href="activites.html" class=""><i class="fa-solid fa-compass"></i><span class="i18n" data-fr="Activités" data-en="Activities">Activités</span></a>
-</nav>
 
-<script>
-const elements = document.querySelectorAll('.i18n');
-function setLang(lang){ elements.forEach(el=>{ if(el.dataset && el.dataset[lang]) el.innerText = el.dataset[lang]; }); }
-setLang('fr');
-</script>
+<nav class="bottom-nav">
+  <a href="index.html">
+    <i class="fa-solid fa-house"></i>
+    <span>Accueil</span>
+  </a>
+  <a href="asavoir.html" class="active">
+    <i class="fa-solid fa-circle-info"></i>
+    <span>À savoir</span>
+  </a>
+  <a href="activites.html">
+    <i class="fa-solid fa-compass"></i>
+    <span>Activités</span>
+  </a>
+</nav>
 
 </body>
 </html>
