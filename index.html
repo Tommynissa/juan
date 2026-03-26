@@ -7,32 +7,34 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
 <body class="home">
 
-<!-- HEADER (caché uniquement ici) -->
 <header class="header">
-  <h1>Bienvenue</h1>
+  <div class="header-inner">
+    <h1>Bienvenue</h1>
+  </div>
 </header>
 
 <main class="content">
 
-  <!-- LOGO -->
   <div class="logo-wrap">
-    <img src="logo.jpeg" alt="Logo">
+    <img src="logo.jpeg" alt="Anaïs">
   </div>
 
-  <!-- MÉTÉO -->
-  <div class="weather">
-    <div class="weather-row" id="weather-row"></div>
+  <div class="weather" id="weather-box">
+    <div class="weather-row" id="weather-row">
+      <div class="weather-day">
+        <div class="d">Chargement</div>
+        <div class="icon">☀️</div>
+        <div class="t">--°</div>
+      </div>
+    </div>
   </div>
 
-  <!-- TEXTE -->
   <p class="intro">
-    Bienvenue à Juan-les-Pins, perle de la Côte d’Azur. Profitez d’un séjour entre mer, soleil et douceur méditerranéenne.
+    Bienvenue à Juan-les-Pins, perle de la Côte d’Azur ! Ici, la mer Méditerranée se mêle à l’effervescence des soirées, aux plages dorées et aux balades entre pins et ruelles charmantes. Vous êtes au cœur d’un lieu vivant, entre douceur provençale et élégance azuréenne. Profitez de la plage, des restaurants, des terrasses animées et de l’ambiance unique qui fait la réputation de Juan-les-Pins.
   </p>
 
-  <!-- INFOS -->
   <section class="section">
     <div class="section-head">
       <h2>Informations utiles</h2>
@@ -41,32 +43,39 @@
 
     <div class="carousel auto-carousel" id="infos-carousel">
       <a href="acces.html" class="tile">
-        <div class="icon-wrap"><i class="fa-solid fa-location-dot"></i></div>
+        <div class="icon-wrap">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
         <h3>Accès</h3>
-        <p>Arrivée et adresse</p>
+        <p>Adresse, arrivée autonome et conseils pratiques.</p>
       </a>
 
       <a href="wifi.html" class="tile">
-        <div class="icon-wrap"><i class="fa-solid fa-wifi"></i></div>
+        <div class="icon-wrap">
+          <i class="fa-solid fa-wifi"></i>
+        </div>
         <h3>Wi-Fi</h3>
-        <p>Connexion internet</p>
+        <p>Nom du réseau, mot de passe et aide à la connexion.</p>
       </a>
 
       <a href="equipement.html" class="tile">
-        <div class="icon-wrap"><i class="fa-solid fa-house"></i></div>
+        <div class="icon-wrap">
+          <i class="fa-solid fa-house"></i>
+        </div>
         <h3>Équipements</h3>
-        <p>Tout le confort</p>
+        <p>Tout ce qui est à votre disposition pour un séjour confortable.</p>
       </a>
 
       <a href="transport.html" class="tile">
-        <div class="icon-wrap"><i class="fa-solid fa-train"></i></div>
+        <div class="icon-wrap">
+          <i class="fa-solid fa-train"></i>
+        </div>
         <h3>Transport</h3>
-        <p>Se déplacer facilement</p>
+        <p>Train, bus, taxi et aéroport à proximité.</p>
       </a>
     </div>
   </section>
 
-  <!-- ACTIVITÉS -->
   <section class="section">
     <div class="section-head">
       <h2>Activités</h2>
@@ -75,28 +84,46 @@
 
     <div class="carousel auto-carousel" id="activites-carousel">
       <a href="restaurants.html" class="tile">
-        <div class="icon-wrap"><i class="fa-solid fa-utensils"></i></div>
-        <h3>Restaurants</h3>
-        <p>Nos meilleures adresses</p>
+        <div class="icon-wrap">
+          <i class="fa-solid fa-utensils"></i>
+        </div>
+        <h3>Restaurants & Bars</h3>
+        <p>Trois belles adresses pour profiter d’une vraie ambiance locale.</p>
       </a>
 
       <a href="plages.html" class="tile">
-        <div class="icon-wrap"><i class="fa-solid fa-umbrella-beach"></i></div>
-        <h3>Plages</h3>
-        <p>Détente et soleil</p>
+        <div class="icon-wrap">
+          <i class="fa-solid fa-umbrella-beach"></i>
+        </div>
+        <h3>Plages & Loisirs</h3>
+        <p>Plages, détente et activités nautiques à proximité.</p>
       </a>
 
       <a href="decouvrir.html" class="tile">
-        <div class="icon-wrap"><i class="fa-solid fa-map"></i></div>
-        <h3>Découvrir</h3>
-        <p>À visiter autour</p>
+        <div class="icon-wrap">
+          <i class="fa-solid fa-map-location-dot"></i>
+        </div>
+        <h3>À découvrir</h3>
+        <p>Les incontournables à explorer autour de Juan-les-Pins.</p>
       </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Adresse</h2>
+    </div>
+
+    <div class="address-card">
+      xx avenue du docteur Fabre<br>
+      06160 Juan-les-Pins
+      <br>
+      <a class="map-btn" href="https://maps.google.com" target="_blank">Voir sur Google Maps</a>
     </div>
   </section>
 
 </main>
 
-<!-- NAV -->
 <nav class="bottom-nav">
   <a href="index.html" class="active">
     <i class="fa-solid fa-house"></i>
@@ -113,54 +140,107 @@
 </nav>
 
 <script>
-/* ===== METEO ===== */
-function weatherIcon(code){
-  if(code===0) return "☀️";
-  if([1,2].includes(code)) return "🌤️";
-  if(code===3) return "☁️";
-  return "⛅";
-}
-
-async function loadWeather(){
-  const url="https://api.open-meteo.com/v1/forecast?latitude=43.57&longitude=7.12&daily=weather_code,temperature_2m_max&timezone=auto";
-  const res=await fetch(url);
-  const data=await res.json();
-  const row=document.getElementById("weather-row");
-
-  data.daily.time.slice(0,5).forEach((day,i)=>{
-    const temp=Math.round(data.daily.temperature_2m_max[i]);
-    const code=data.daily.weather_code[i];
-
-    row.innerHTML+=`
-      <div class="weather-day">
-        <div>${i===0?"Aujourd’hui":new Date(day).toLocaleDateString("fr-FR",{weekday:"short"})}</div>
-        <div class="icon">${weatherIcon(code)}</div>
-        <div>${temp}°</div>
-      </div>
-    `;
-  });
-}
-
-/* ===== SLIDER INFINI ===== */
-function setupCarousel(id){
-  const el=document.getElementById(id);
-  const items=[...el.children];
-
-  items.forEach(i=>el.appendChild(i.cloneNode(true)));
-
-  function loop(){
-    el.scrollLeft+=0.4;
-    if(el.scrollLeft>=el.scrollWidth/2){
-      el.scrollLeft=0;
-    }
-    requestAnimationFrame(loop);
+  function weatherIcon(code) {
+    if (code === 0) return "☀️";
+    if ([1, 2].includes(code)) return "🌤️";
+    if (code === 3) return "☁️";
+    if ([45, 48].includes(code)) return "🌫️";
+    if ([51, 53, 55, 56, 57, 61, 63, 65, 66, 67, 80, 81, 82].includes(code)) return "🌧️";
+    if ([71, 73, 75, 77, 85, 86].includes(code)) return "❄️";
+    if ([95, 96, 99].includes(code)) return "⛈️";
+    return "⛅";
   }
-  loop();
-}
 
-loadWeather();
-setupCarousel("infos-carousel");
-setupCarousel("activites-carousel");
+  function dayLabel(dateString, index) {
+    if (index === 0) return "Aujourd’hui";
+    const days = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"];
+    const d = new Date(dateString);
+    return days[d.getDay()];
+  }
+
+  async function loadWeather() {
+    const lat = 43.57;
+    const lon = 7.12;
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=weather_code,temperature_2m_max&timezone=auto&forecast_days=5`;
+
+    try {
+      const res = await fetch(url);
+      const data = await res.json();
+
+      const row = document.getElementById("weather-row");
+      row.innerHTML = "";
+
+      data.daily.time.forEach((day, index) => {
+        const code = data.daily.weather_code[index];
+        const temp = Math.round(data.daily.temperature_2m_max[index]);
+
+        const item = document.createElement("div");
+        item.className = "weather-day";
+        item.innerHTML = `
+          <div class="d">${dayLabel(day, index)}</div>
+          <div class="icon">${weatherIcon(code)}</div>
+          <div class="t">${temp}°</div>
+        `;
+        row.appendChild(item);
+      });
+    } catch (e) {
+      document.getElementById("weather-row").innerHTML = `
+        <div class="weather-day">
+          <div class="d">Météo</div>
+          <div class="icon">☀️</div>
+          <div class="t">--°</div>
+        </div>
+      `;
+    }
+  }
+
+  function setupCarousel(id, speed = 0.35) {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    const items = [...el.children];
+    items.forEach(item => {
+      const clone = item.cloneNode(true);
+      clone.setAttribute("aria-hidden", "true");
+      el.appendChild(clone);
+    });
+
+    let pause = false;
+    let pausedByTouch = false;
+    let touchTimeout;
+
+    function loop() {
+      if (!pause && !pausedByTouch) {
+        el.scrollLeft += speed;
+
+        if (el.scrollLeft >= el.scrollWidth / 2) {
+          el.scrollLeft = 0;
+        }
+      }
+      requestAnimationFrame(loop);
+    }
+
+    el.addEventListener("mouseenter", () => pause = true);
+    el.addEventListener("mouseleave", () => pause = false);
+
+    el.addEventListener("touchstart", () => {
+      pausedByTouch = true;
+      clearTimeout(touchTimeout);
+    }, { passive: true });
+
+    el.addEventListener("touchend", () => {
+      clearTimeout(touchTimeout);
+      touchTimeout = setTimeout(() => {
+        pausedByTouch = false;
+      }, 1200);
+    }, { passive: true });
+
+    loop();
+  }
+
+  loadWeather();
+  setupCarousel("infos-carousel", 0.35);
+  setupCarousel("activites-carousel", 0.35);
 </script>
 
 </body>
