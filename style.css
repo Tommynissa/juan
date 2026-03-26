@@ -402,4 +402,10 @@ header h1 {
   .place img {
     height: 260px;
   }
+
+.content {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 10px 16px 100px;
 }
+  }
