@@ -468,4 +468,45 @@ body {
   .place.full-width-premium img {
     height: 320px;
   }
+  .wifi-card-premium {
+  align-items: center;
+}
+
+.wifi-content {
+  width: 100%;
+}
+
+.wifi-content h3 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.wifi-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wifi-line {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px;
+  background: #f8f3ec;
+  border: 1px solid #e6d8c7;
+  border-radius: 14px;
+}
+
+.wifi-label {
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.wifi-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+}
 }
