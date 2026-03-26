@@ -11,7 +11,12 @@
 
 <header class="header">
   <div class="header-inner">
-    <h1>Bienvenue</h1>
+    <h1 data-fr="Bienvenue" data-en="Welcome">Bienvenue</h1>
+
+    <div class="lang-switch">
+      <button class="lang-btn" data-lang="fr" onclick="setLanguage('fr')">FR</button>
+      <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+    </div>
   </div>
 </header>
 
@@ -24,101 +29,114 @@
   <div class="weather" id="weather-box">
     <div class="weather-row" id="weather-row">
       <div class="weather-day">
-        <div class="d">Chargement</div>
+        <div class="d" data-fr="Chargement" data-en="Loading">Chargement</div>
         <div class="icon">☀️</div>
         <div class="t">--°</div>
       </div>
     </div>
   </div>
 
-  <p class="intro">
+  <p class="intro"
+     data-fr="Bienvenue à Juan-les-Pins, perle de la Côte d’Azur ! Ici, la mer Méditerranée se mêle à l’effervescence des soirées, aux plages dorées et aux balades entre pins et ruelles charmantes. Vous êtes au cœur d’un lieu vivant, entre douceur provençale et élégance azuréenne. Profitez de la plage, des restaurants, des terrasses animées et de l’ambiance unique qui fait la réputation de Juan-les-Pins."
+     data-en="Welcome to Juan-les-Pins, a gem of the French Riviera! Here, the Mediterranean meets lively evenings, golden beaches and walks between pine trees and charming streets. You are in the heart of a vibrant destination, between Provençal sweetness and Riviera elegance. Enjoy the beach, restaurants, lively terraces and the unique atmosphere that makes Juan-les-Pins so special.">
     Bienvenue à Juan-les-Pins, perle de la Côte d’Azur ! Ici, la mer Méditerranée se mêle à l’effervescence des soirées, aux plages dorées et aux balades entre pins et ruelles charmantes. Vous êtes au cœur d’un lieu vivant, entre douceur provençale et élégance azuréenne. Profitez de la plage, des restaurants, des terrasses animées et de l’ambiance unique qui fait la réputation de Juan-les-Pins.
   </p>
 
   <section class="section">
     <div class="section-head">
-      <h2>Informations utiles</h2>
-      <a href="asavoir.html" class="link-pill">Voir plus</a>
+      <h2 data-fr="Informations utiles" data-en="Useful information">Informations utiles</h2>
+      <a href="asavoir.html" class="link-pill" data-fr="Voir plus" data-en="See more">Voir plus</a>
     </div>
 
     <div class="carousel auto-carousel" id="infos-carousel">
       <a href="acces.html" class="tile">
-        <div class="icon-wrap">
-          <i class="fa-solid fa-location-dot"></i>
-        </div>
-        <h3>Accès</h3>
-        <p>Adresse, arrivée autonome et conseils pratiques.</p>
+        <div class="icon-wrap"><i class="fa-solid fa-location-dot"></i></div>
+        <h3 data-fr="Accès" data-en="Access">Accès</h3>
+        <p data-fr="Adresse, arrivée autonome et conseils pratiques." data-en="Address, self check-in and practical tips.">
+          Adresse, arrivée autonome et conseils pratiques.
+        </p>
       </a>
 
       <a href="wifi.html" class="tile">
-        <div class="icon-wrap">
-          <i class="fa-solid fa-wifi"></i>
-        </div>
-        <h3>Wi-Fi</h3>
-        <p>Nom du réseau, mot de passe et aide à la connexion.</p>
+        <div class="icon-wrap"><i class="fa-solid fa-wifi"></i></div>
+        <h3 data-fr="Wi-Fi" data-en="Wi-Fi">Wi-Fi</h3>
+        <p data-fr="Nom du réseau, mot de passe et aide à la connexion." data-en="Network name, password and connection help.">
+          Nom du réseau, mot de passe et aide à la connexion.
+        </p>
       </a>
 
       <a href="equipement.html" class="tile">
-        <div class="icon-wrap">
-          <i class="fa-solid fa-house"></i>
-        </div>
-        <h3>Équipements</h3>
-        <p>Tout ce qui est à votre disposition pour un séjour confortable.</p>
+        <div class="icon-wrap"><i class="fa-solid fa-house"></i></div>
+        <h3 data-fr="Équipements" data-en="Amenities">Équipements</h3>
+        <p data-fr="Tout ce qui est à votre disposition pour un séjour confortable." data-en="Everything available for a comfortable stay.">
+          Tout ce qui est à votre disposition pour un séjour confortable.
+        </p>
       </a>
 
       <a href="transport.html" class="tile">
-        <div class="icon-wrap">
-          <i class="fa-solid fa-train"></i>
-        </div>
-        <h3>Transport</h3>
-        <p>Train, bus, taxi et aéroport à proximité.</p>
+        <div class="icon-wrap"><i class="fa-solid fa-train"></i></div>
+        <h3 data-fr="Transport" data-en="Transport">Transport</h3>
+        <p data-fr="Train, bus, taxi et aéroport à proximité." data-en="Train, bus, taxi and airport nearby.">
+          Train, bus, taxi et aéroport à proximité.
+        </p>
+      </a>
+
+      <a href="alimentation.html" class="tile">
+        <div class="icon-wrap"><i class="fa-solid fa-basket-shopping"></i></div>
+        <h3 data-fr="Alimentation" data-en="Groceries">Alimentation</h3>
+        <p data-fr="Courses et commerces du quotidien à proximité." data-en="Groceries and everyday shops nearby.">
+          Courses et commerces du quotidien à proximité.
+        </p>
       </a>
     </div>
   </section>
 
   <section class="section">
     <div class="section-head">
-      <h2>Activités</h2>
-      <a href="activites.html" class="link-pill">Voir plus</a>
+      <h2 data-fr="Activités" data-en="Activities">Activités</h2>
+      <a href="activites.html" class="link-pill" data-fr="Voir plus" data-en="See more">Voir plus</a>
     </div>
 
     <div class="carousel auto-carousel" id="activites-carousel">
       <a href="restaurants.html" class="tile">
-        <div class="icon-wrap">
-          <i class="fa-solid fa-utensils"></i>
-        </div>
-        <h3>Restaurants & Bars</h3>
-        <p>Trois belles adresses pour profiter d’une vraie ambiance locale.</p>
+        <div class="icon-wrap"><i class="fa-solid fa-utensils"></i></div>
+        <h3 data-fr="Restaurants & Bars" data-en="Restaurants & Bars">Restaurants & Bars</h3>
+        <p data-fr="Trois belles adresses pour profiter d’une vraie ambiance locale." data-en="Three lovely places to enjoy the local atmosphere.">
+          Trois belles adresses pour profiter d’une vraie ambiance locale.
+        </p>
       </a>
 
       <a href="plages.html" class="tile">
-        <div class="icon-wrap">
-          <i class="fa-solid fa-umbrella-beach"></i>
-        </div>
-        <h3>Plages & Loisirs</h3>
-        <p>Plages, détente et activités nautiques à proximité.</p>
+        <div class="icon-wrap"><i class="fa-solid fa-umbrella-beach"></i></div>
+        <h3 data-fr="Plages & Loisirs" data-en="Beaches & Leisure">Plages & Loisirs</h3>
+        <p data-fr="Plages, détente et activités nautiques à proximité." data-en="Beaches, relaxation and water activities nearby.">
+          Plages, détente et activités nautiques à proximité.
+        </p>
       </a>
 
       <a href="decouvrir.html" class="tile">
-        <div class="icon-wrap">
-          <i class="fa-solid fa-map-location-dot"></i>
-        </div>
-        <h3>À découvrir</h3>
-        <p>Les incontournables à explorer autour de Juan-les-Pins.</p>
+        <div class="icon-wrap"><i class="fa-solid fa-map-location-dot"></i></div>
+        <h3 data-fr="À découvrir" data-en="Discover">À découvrir</h3>
+        <p data-fr="Les incontournables à explorer autour de Juan-les-Pins." data-en="Must-see places around Juan-les-Pins.">
+          Les incontournables à explorer autour de Juan-les-Pins.
+        </p>
       </a>
     </div>
   </section>
 
   <section class="section">
     <div class="section-head">
-      <h2>Adresse</h2>
+      <h2 data-fr="Adresse" data-en="Address">Adresse</h2>
     </div>
 
     <div class="address-card">
-      xx avenue du docteur Fabre<br>
-      06160 Juan-les-Pins
+      <span data-fr="xx avenue du docteur Fabre<br>06160 Juan-les-Pins" data-en="xx avenue du docteur Fabre<br>06160 Juan-les-Pins">
+        xx avenue du docteur Fabre<br>06160 Juan-les-Pins
+      </span>
       <br>
-      <a class="map-btn" href="https://maps.google.com" target="_blank">Voir sur Google Maps</a>
+      <a class="map-btn" href="https://maps.google.com" target="_blank" data-fr="Voir sur Google Maps" data-en="View on Google Maps">
+        Voir sur Google Maps
+      </a>
     </div>
   </section>
 
@@ -127,15 +145,15 @@
 <nav class="bottom-nav">
   <a href="index.html" class="active">
     <i class="fa-solid fa-house"></i>
-    <span>Accueil</span>
+    <span data-fr="Accueil" data-en="Home">Accueil</span>
   </a>
   <a href="asavoir.html">
     <i class="fa-solid fa-circle-info"></i>
-    <span>À savoir</span>
+    <span data-fr="À savoir" data-en="Info">À savoir</span>
   </a>
   <a href="activites.html">
     <i class="fa-solid fa-compass"></i>
-    <span>Activités</span>
+    <span data-fr="Activités" data-en="Activities">Activités</span>
   </a>
 </nav>
 
@@ -151,11 +169,16 @@
     return "⛅";
   }
 
-  function dayLabel(dateString, index) {
-    if (index === 0) return "Aujourd’hui";
-    const days = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"];
+  function dayLabel(dateString, index, lang) {
+    if (index === 0) return lang === "fr" ? "Aujourd’hui" : "Today";
+    const daysFr = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"];
+    const daysEn = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     const d = new Date(dateString);
-    return days[d.getDay()];
+    return lang === "fr" ? daysFr[d.getDay()] : daysEn[d.getDay()];
+  }
+
+  function getCurrentLang() {
+    return localStorage.getItem("siteLang") || "fr";
   }
 
   async function loadWeather() {
@@ -169,6 +192,7 @@
 
       const row = document.getElementById("weather-row");
       row.innerHTML = "";
+      const lang = getCurrentLang();
 
       data.daily.time.forEach((day, index) => {
         const code = data.daily.weather_code[index];
@@ -177,16 +201,17 @@
         const item = document.createElement("div");
         item.className = "weather-day";
         item.innerHTML = `
-          <div class="d">${dayLabel(day, index)}</div>
+          <div class="d">${dayLabel(day, index, lang)}</div>
           <div class="icon">${weatherIcon(code)}</div>
           <div class="t">${temp}°</div>
         `;
         row.appendChild(item);
       });
     } catch (e) {
+      const lang = getCurrentLang();
       document.getElementById("weather-row").innerHTML = `
         <div class="weather-day">
-          <div class="d">Météo</div>
+          <div class="d">${lang === "fr" ? "Météo" : "Weather"}</div>
           <div class="icon">☀️</div>
           <div class="t">--°</div>
         </div>
@@ -238,9 +263,41 @@
     loop();
   }
 
-  loadWeather();
-  setupCarousel("infos-carousel", 0.35);
-  setupCarousel("activites-carousel", 0.35);
+  function setLanguage(lang) {
+    document.querySelectorAll("[data-fr]").forEach(el => {
+      const value = el.getAttribute("data-" + lang);
+      if (value !== null) el.innerHTML = value;
+    });
+
+    localStorage.setItem("siteLang", lang);
+
+    document.querySelectorAll(".lang-btn").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+
+    loadWeather();
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const existingSwitch = document.querySelector(".lang-switch");
+    if (!existingSwitch) {
+      const headerInner = document.querySelector(".header-inner");
+      if (headerInner) {
+        const switcher = document.createElement("div");
+        switcher.className = "lang-switch";
+        switcher.innerHTML = `
+          <button class="lang-btn" data-lang="fr" onclick="setLanguage('fr')">FR</button>
+          <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+        `;
+        headerInner.appendChild(switcher);
+      }
+    }
+
+    const savedLang = localStorage.getItem("siteLang") || "fr";
+    setLanguage(savedLang);
+    setupCarousel("infos-carousel", 0.35);
+    setupCarousel("activites-carousel", 0.35);
+  });
 </script>
 
 </body>
