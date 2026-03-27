@@ -9,15 +9,23 @@
 </head>
 <body>
 
-<header>
+<header class="header">
   <div class="header-inner">
     <a class="back-btn" href="asavoir.html"><i class="fa-solid fa-arrow-left"></i></a>
-    <h1>Règlement</h1>
+
+    <h1 data-fr="Règlement" data-en="House Rules">Règlement</h1>
+
+    <div class="lang-switch">
+      <button class="lang-btn" data-lang="fr" onclick="setLanguage('fr')">FR</button>
+      <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+    </div>
   </div>
 </header>
 
 <main class="content">
-  <p class="intro">
+  <p class="intro"
+     data-fr="Quelques règles simples pour garantir un séjour agréable pour tous."
+     data-en="A few simple rules to ensure a pleasant stay for everyone.">
     Quelques règles simples pour garantir un séjour agréable pour tous.
   </p>
 
@@ -25,24 +33,33 @@
     <div class="card-block">
       <div class="icon-wrap"><i class="fa-solid fa-house-circle-check"></i></div>
       <div>
-        <h3>Respect du logement</h3>
-        <p>Merci de prendre soin de l’appartement et de ses équipements.</p>
+        <h3 data-fr="Respect du logement" data-en="Respect for the apartment">Respect du logement</h3>
+        <p data-fr="Merci de prendre soin de l’appartement et de ses équipements."
+           data-en="Please take good care of the apartment and its amenities.">
+          Merci de prendre soin de l’appartement et de ses équipements.
+        </p>
       </div>
     </div>
 
     <div class="card-block">
       <div class="icon-wrap"><i class="fa-solid fa-volume-xmark"></i></div>
       <div>
-        <h3>Nuisances sonores</h3>
-        <p>Évitez tout bruit excessif, en particulier entre 22h et 8h.</p>
+        <h3 data-fr="Nuisances sonores" data-en="Noise">Nuisances sonores</h3>
+        <p data-fr="Évitez tout bruit excessif, en particulier entre 22h et 8h."
+           data-en="Please avoid excessive noise, especially between 10 PM and 8 AM.">
+          Évitez tout bruit excessif, en particulier entre 22h et 8h.
+        </p>
       </div>
     </div>
 
     <div class="card-block">
       <div class="icon-wrap"><i class="fa-solid fa-door-open"></i></div>
       <div>
-        <h3>Départ</h3>
-        <p>Merci de laisser le logement dans un état correct avant votre départ.</p>
+        <h3 data-fr="Départ" data-en="Departure">Départ</h3>
+        <p data-fr="Merci de laisser le logement dans un état correct avant votre départ."
+           data-en="Please leave the apartment in good condition before your departure.">
+          Merci de laisser le logement dans un état correct avant votre départ.
+        </p>
       </div>
     </div>
   </div>
@@ -51,17 +68,37 @@
 <nav class="bottom-nav">
   <a href="index.html">
     <i class="fa-solid fa-house"></i>
-    <span>Accueil</span>
+    <span data-fr="Accueil" data-en="Home">Accueil</span>
   </a>
   <a href="asavoir.html" class="active">
     <i class="fa-solid fa-circle-info"></i>
-    <span>À savoir</span>
+    <span data-fr="À savoir" data-en="Info">À savoir</span>
   </a>
   <a href="activites.html">
     <i class="fa-solid fa-compass"></i>
-    <span>Activités</span>
+    <span data-fr="Activités" data-en="Activities">Activités</span>
   </a>
 </nav>
+
+<script>
+  function setLanguage(lang) {
+    document.querySelectorAll("[data-fr]").forEach(el => {
+      const value = el.getAttribute("data-" + lang);
+      if (value !== null) el.innerHTML = value;
+    });
+
+    localStorage.setItem("siteLang", lang);
+
+    document.querySelectorAll(".lang-btn").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const savedLang = localStorage.getItem("siteLang") || "fr";
+    setLanguage(savedLang);
+  });
+</script>
 
 </body>
 </html>
