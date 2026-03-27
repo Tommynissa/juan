@@ -12,12 +12,20 @@
 <header class="header">
   <div class="header-inner">
     <a class="back-btn" href="activites.html"><i class="fa-solid fa-arrow-left"></i></a>
-    <h1>Restaurants & Bars</h1>
+
+    <h1 data-fr="Restaurants & Bars" data-en="Restaurants & Bars">Restaurants & Bars</h1>
+
+    <div class="lang-switch">
+      <button class="lang-btn" data-lang="fr" onclick="setLanguage('fr')">FR</button>
+      <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+    </div>
   </div>
 </header>
 
 <main class="content">
-  <p class="intro">
+  <p class="intro"
+     data-fr="Sélection de trois belles adresses pour profiter pleinement de la région."
+     data-en="A selection of three great spots to fully enjoy the local atmosphere.">
     Sélection de trois belles adresses pour profiter pleinement de la région.
   </p>
 
@@ -25,8 +33,13 @@
     <img src="placeholder.svg" alt="Le Crystal">
     <div class="body">
       <h3>Le Crystal</h3>
-      <a class="addr" href="https://maps.google.com" target="_blank">5 Bd Eugène Gazagnaire, Juan-les-Pins</a>
-      <p>Institution de Juan-les-Pins, idéale pour un dîner méditerranéen face à la mer, dans une ambiance élégante et détendue.</p>
+      <a class="addr" href="https://maps.google.com" target="_blank">
+        5 Bd Eugène Gazagnaire, Juan-les-Pins
+      </a>
+      <p data-fr="Institution de Juan-les-Pins, idéale pour un dîner méditerranéen face à la mer, dans une ambiance élégante et détendue."
+         data-en="A well-known spot in Juan-les-Pins, perfect for a seaside Mediterranean dinner in an elegant yet relaxed atmosphere.">
+        Institution de Juan-les-Pins, idéale pour un dîner méditerranéen face à la mer, dans une ambiance élégante et détendue.
+      </p>
     </div>
   </article>
 
@@ -34,8 +47,13 @@
     <img src="placeholder.svg" alt="Pam Pam Bar">
     <div class="body">
       <h3>Pam Pam Bar</h3>
-      <a class="addr" href="https://maps.google.com" target="_blank">137 Bd Président Wilson, Juan-les-Pins</a>
-      <p>Lieu emblématique pour sortir le soir, avec ambiance festive, cocktails exotiques et musique live.</p>
+      <a class="addr" href="https://maps.google.com" target="_blank">
+        137 Bd Président Wilson, Juan-les-Pins
+      </a>
+      <p data-fr="Lieu emblématique pour sortir le soir, avec ambiance festive, cocktails exotiques et musique live."
+         data-en="A lively and iconic nightlife spot with a festive atmosphere, exotic cocktails and live music.">
+        Lieu emblématique pour sortir le soir, avec ambiance festive, cocktails exotiques et musique live.
+      </p>
     </div>
   </article>
 
@@ -43,26 +61,52 @@
     <img src="placeholder.svg" alt="Helios Plage">
     <div class="body">
       <h3>Helios Plage</h3>
-      <a class="addr" href="https://maps.google.com" target="_blank">Promenade du Soleil, Juan-les-Pins</a>
-      <p>Restaurant de plage élégant avec transats et cuisine méditerranéenne fraîche, parfait pour un déjeuner face à la mer.</p>
+      <a class="addr" href="https://maps.google.com" target="_blank">
+        Promenade du Soleil, Juan-les-Pins
+      </a>
+      <p data-fr="Restaurant de plage élégant avec transats et cuisine méditerranéenne fraîche, parfait pour un déjeuner face à la mer."
+         data-en="An elegant beach restaurant with sunbeds and fresh Mediterranean cuisine, perfect for a seaside lunch.">
+        Restaurant de plage élégant avec transats et cuisine méditerranéenne fraîche, parfait pour un déjeuner face à la mer.
+      </p>
     </div>
   </article>
+
 </main>
 
 <nav class="bottom-nav">
   <a href="index.html">
     <i class="fa-solid fa-house"></i>
-    <span>Accueil</span>
+    <span data-fr="Accueil" data-en="Home">Accueil</span>
   </a>
   <a href="asavoir.html">
     <i class="fa-solid fa-circle-info"></i>
-    <span>À savoir</span>
+    <span data-fr="À savoir" data-en="Info">À savoir</span>
   </a>
   <a href="activites.html" class="active">
     <i class="fa-solid fa-compass"></i>
-    <span>Activités</span>
+    <span data-fr="Activités" data-en="Activities">Activités</span>
   </a>
 </nav>
+
+<script>
+  function setLanguage(lang) {
+    document.querySelectorAll("[data-fr]").forEach(el => {
+      const value = el.getAttribute("data-" + lang);
+      if (value !== null) el.innerHTML = value;
+    });
+
+    localStorage.setItem("siteLang", lang);
+
+    document.querySelectorAll(".lang-btn").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const savedLang = localStorage.getItem("siteLang") || "fr";
+    setLanguage(savedLang);
+  });
+</script>
 
 </body>
 </html>
