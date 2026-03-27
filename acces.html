@@ -9,15 +9,23 @@
 </head>
 <body>
 
-<header>
+<header class="header">
   <div class="header-inner">
     <a class="back-btn" href="asavoir.html"><i class="fa-solid fa-arrow-left"></i></a>
-    <h1>Accès</h1>
+
+    <h1 data-fr="Accès" data-en="Access">Accès</h1>
+
+    <div class="lang-switch">
+      <button class="lang-btn" data-lang="fr" onclick="setLanguage('fr')">FR</button>
+      <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+    </div>
   </div>
 </header>
 
 <main class="content">
-  <p class="intro">
+  <p class="intro"
+     data-fr="Voici toutes les informations nécessaires pour accéder facilement à l’appartement."
+     data-en="Here is all the information you need to access the apartment easily.">
     Voici toutes les informations nécessaires pour accéder facilement à l’appartement.
   </p>
 
@@ -25,24 +33,33 @@
     <div class="card-block">
       <div class="icon-wrap"><i class="fa-solid fa-location-dot"></i></div>
       <div>
-        <h3>Adresse</h3>
-        <p>XX avenue du Docteur Fabre, 06160 Juan-les-Pins</p>
+        <h3 data-fr="Adresse" data-en="Address">Adresse</h3>
+        <p data-fr="XX avenue du Docteur Fabre, 06160 Juan-les-Pins"
+           data-en="XX avenue du Docteur Fabre, 06160 Juan-les-Pins">
+          XX avenue du Docteur Fabre, 06160 Juan-les-Pins
+        </p>
       </div>
     </div>
 
     <div class="card-block">
       <div class="icon-wrap"><i class="fa-solid fa-key"></i></div>
       <div>
-        <h3>Votre arrivée</h3>
-        <p>L’arrivée se fait de manière autonome. Les instructions exactes vous seront communiquées avant votre venue.</p>
+        <h3 data-fr="Votre arrivée" data-en="Your arrival">Votre arrivée</h3>
+        <p data-fr="L’arrivée se fait de manière autonome. Les instructions exactes vous seront communiquées avant votre venue."
+           data-en="Check-in is self-service. Exact access instructions will be provided before your arrival.">
+          L’arrivée se fait de manière autonome. Les instructions exactes vous seront communiquées avant votre venue.
+        </p>
       </div>
     </div>
 
     <div class="card-block">
       <div class="icon-wrap"><i class="fa-solid fa-square-parking"></i></div>
       <div>
-        <h3>Parking</h3>
-        <p>Une place de parking privative est incluse avec le logement.</p>
+        <h3 data-fr="Parking" data-en="Parking">Parking</h3>
+        <p data-fr="Une place de parking privative est incluse avec le logement."
+           data-en="A private parking space is included with the apartment.">
+          Une place de parking privative est incluse avec le logement.
+        </p>
       </div>
     </div>
   </div>
@@ -51,17 +68,37 @@
 <nav class="bottom-nav">
   <a href="index.html">
     <i class="fa-solid fa-house"></i>
-    <span>Accueil</span>
+    <span data-fr="Accueil" data-en="Home">Accueil</span>
   </a>
   <a href="asavoir.html" class="active">
     <i class="fa-solid fa-circle-info"></i>
-    <span>À savoir</span>
+    <span data-fr="À savoir" data-en="Info">À savoir</span>
   </a>
   <a href="activites.html">
     <i class="fa-solid fa-compass"></i>
-    <span>Activités</span>
+    <span data-fr="Activités" data-en="Activities">Activités</span>
   </a>
 </nav>
+
+<script>
+  function setLanguage(lang) {
+    document.querySelectorAll("[data-fr]").forEach(el => {
+      const value = el.getAttribute("data-" + lang);
+      if (value !== null) el.innerHTML = value;
+    });
+
+    localStorage.setItem("siteLang", lang);
+
+    document.querySelectorAll(".lang-btn").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const savedLang = localStorage.getItem("siteLang") || "fr";
+    setLanguage(savedLang);
+  });
+</script>
 
 </body>
 </html>
