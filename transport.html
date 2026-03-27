@@ -9,15 +9,23 @@
 </head>
 <body>
 
-<header>
+<header class="header">
   <div class="header-inner">
     <a class="back-btn" href="asavoir.html"><i class="fa-solid fa-arrow-left"></i></a>
-    <h1>Transport</h1>
+
+    <h1 data-fr="Transport" data-en="Transport">Transport</h1>
+
+    <div class="lang-switch">
+      <button class="lang-btn" data-lang="fr" onclick="setLanguage('fr')">FR</button>
+      <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+    </div>
   </div>
 </header>
 
 <main class="content">
-  <p class="intro">
+  <p class="intro"
+     data-fr="Juan-les-Pins bénéficie d’une situation idéale avec de nombreux moyens de transport à proximité."
+     data-en="Juan-les-Pins enjoys an ideal location with many transport options nearby.">
     Juan-les-Pins bénéficie d’une situation idéale avec de nombreux moyens de transport à proximité.
   </p>
 
@@ -25,24 +33,33 @@
     <div class="card-block">
       <div class="icon-wrap"><i class="fa-solid fa-train"></i></div>
       <div>
-        <h3>Train</h3>
-        <p>La gare de Juan-les-Pins permet de rejoindre Antibes, Cannes, Nice ou Monaco.</p>
+        <h3 data-fr="Train" data-en="Train">Train</h3>
+        <p data-fr="La gare de Juan-les-Pins permet de rejoindre Antibes, Cannes, Nice ou Monaco."
+           data-en="Juan-les-Pins train station provides easy access to Antibes, Cannes, Nice and Monaco.">
+          La gare de Juan-les-Pins permet de rejoindre Antibes, Cannes, Nice ou Monaco.
+        </p>
       </div>
     </div>
 
     <div class="card-block">
       <div class="icon-wrap"><i class="fa-solid fa-bus"></i></div>
       <div>
-        <h3>Bus</h3>
-        <p>Plusieurs lignes desservent Juan-les-Pins et ses alentours.</p>
+        <h3 data-fr="Bus" data-en="Bus">Bus</h3>
+        <p data-fr="Plusieurs lignes desservent Juan-les-Pins et ses alentours."
+           data-en="Several bus lines serve Juan-les-Pins and the surrounding area.">
+          Plusieurs lignes desservent Juan-les-Pins et ses alentours.
+        </p>
       </div>
     </div>
 
     <div class="card-block">
       <div class="icon-wrap"><i class="fa-solid fa-plane"></i></div>
       <div>
-        <h3>Aéroport</h3>
-        <p>L’aéroport de Nice se situe à environ 25 minutes en voiture.</p>
+        <h3 data-fr="Aéroport" data-en="Airport">Aéroport</h3>
+        <p data-fr="L’aéroport de Nice se situe à environ 25 minutes en voiture."
+           data-en="Nice Airport is about 25 minutes away by car.">
+          L’aéroport de Nice se situe à environ 25 minutes en voiture.
+        </p>
       </div>
     </div>
   </div>
@@ -51,17 +68,37 @@
 <nav class="bottom-nav">
   <a href="index.html">
     <i class="fa-solid fa-house"></i>
-    <span>Accueil</span>
+    <span data-fr="Accueil" data-en="Home">Accueil</span>
   </a>
   <a href="asavoir.html" class="active">
     <i class="fa-solid fa-circle-info"></i>
-    <span>À savoir</span>
+    <span data-fr="À savoir" data-en="Info">À savoir</span>
   </a>
   <a href="activites.html">
     <i class="fa-solid fa-compass"></i>
-    <span>Activités</span>
+    <span data-fr="Activités" data-en="Activities">Activités</span>
   </a>
 </nav>
+
+<script>
+  function setLanguage(lang) {
+    document.querySelectorAll("[data-fr]").forEach(el => {
+      const value = el.getAttribute("data-" + lang);
+      if (value !== null) el.innerHTML = value;
+    });
+
+    localStorage.setItem("siteLang", lang);
+
+    document.querySelectorAll(".lang-btn").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const savedLang = localStorage.getItem("siteLang") || "fr";
+    setLanguage(savedLang);
+  });
+</script>
 
 </body>
 </html>
