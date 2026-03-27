@@ -14,13 +14,21 @@
     <a class="back-btn" href="asavoir.html">
       <i class="fa-solid fa-arrow-left"></i>
     </a>
-    <h1>Wi-Fi</h1>
+
+    <h1 data-fr="Wi-Fi" data-en="Wi-Fi">Wi-Fi</h1>
+
+    <div class="lang-switch">
+      <button class="lang-btn" data-lang="fr" onclick="setLanguage('fr')">FR</button>
+      <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+    </div>
   </div>
 </header>
 
 <main class="content">
 
-  <p class="intro">
+  <p class="intro"
+     data-fr="Une connexion Wi-Fi est disponible dans tout l’appartement pour vous permettre de naviguer, travailler ou profiter de vos contenus en toute tranquillité."
+     data-en="Wi-Fi is available throughout the apartment so you can browse, work or enjoy your content comfortably.">
     Une connexion Wi-Fi est disponible dans tout l’appartement pour vous permettre de naviguer, travailler ou profiter de vos contenus en toute tranquillité.
   </p>
 
@@ -30,16 +38,16 @@
     </div>
 
     <div class="wifi-content">
-      <h3>Connexion Internet</h3>
+      <h3 data-fr="Connexion Internet" data-en="Internet Connection">Connexion Internet</h3>
 
       <div class="wifi-details">
         <div class="wifi-line">
-          <span class="wifi-label">Nom du réseau</span>
+          <span class="wifi-label" data-fr="Nom du réseau" data-en="Network name">Nom du réseau</span>
           <span class="wifi-value">ANAÏS_WIFI</span>
         </div>
 
         <div class="wifi-line">
-          <span class="wifi-label">Mot de passe</span>
+          <span class="wifi-label" data-fr="Mot de passe" data-en="Password">Mot de passe</span>
           <span class="wifi-value">12345678</span>
         </div>
       </div>
@@ -51,17 +59,37 @@
 <nav class="bottom-nav">
   <a href="index.html">
     <i class="fa-solid fa-house"></i>
-    <span>Accueil</span>
+    <span data-fr="Accueil" data-en="Home">Accueil</span>
   </a>
   <a href="asavoir.html" class="active">
     <i class="fa-solid fa-circle-info"></i>
-    <span>À savoir</span>
+    <span data-fr="À savoir" data-en="Info">À savoir</span>
   </a>
   <a href="activites.html">
     <i class="fa-solid fa-compass"></i>
-    <span>Activités</span>
+    <span data-fr="Activités" data-en="Activities">Activités</span>
   </a>
 </nav>
+
+<script>
+  function setLanguage(lang) {
+    document.querySelectorAll("[data-fr]").forEach(el => {
+      const value = el.getAttribute("data-" + lang);
+      if (value !== null) el.innerHTML = value;
+    });
+
+    localStorage.setItem("siteLang", lang);
+
+    document.querySelectorAll(".lang-btn").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const savedLang = localStorage.getItem("siteLang") || "fr";
+    setLanguage(savedLang);
+  });
+</script>
 
 </body>
 </html>
