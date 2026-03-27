@@ -12,15 +12,16 @@
 <header class="header">
   <div class="header-inner">
     <h1 data-fr="Bienvenue" data-en="Welcome">Bienvenue</h1>
-
-    <div class="lang-switch">
-      <button class="lang-btn" data-lang="fr" onclick="setLanguage('fr')">FR</button>
-      <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
-    </div>
   </div>
 </header>
 
 <main class="content">
+
+  <!-- LANGUE visible sur la home -->
+  <div class="home-lang-switch">
+    <button class="lang-btn" data-lang="fr" onclick="setLanguage('fr')">FR</button>
+    <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+  </div>
 
   <div class="logo-wrap">
     <img src="logo.jpeg" alt="Anaïs">
@@ -29,7 +30,7 @@
   <div class="weather" id="weather-box">
     <div class="weather-row" id="weather-row">
       <div class="weather-day">
-        <div class="d" data-fr="Chargement" data-en="Loading">Chargement</div>
+        <div class="d">Chargement</div>
         <div class="icon">☀️</div>
         <div class="t">--°</div>
       </div>
@@ -38,7 +39,7 @@
 
   <p class="intro"
      data-fr="Bienvenue à Juan-les-Pins, perle de la Côte d’Azur ! Ici, la mer Méditerranée se mêle à l’effervescence des soirées, aux plages dorées et aux balades entre pins et ruelles charmantes. Vous êtes au cœur d’un lieu vivant, entre douceur provençale et élégance azuréenne. Profitez de la plage, des restaurants, des terrasses animées et de l’ambiance unique qui fait la réputation de Juan-les-Pins."
-     data-en="Welcome to Juan-les-Pins, a gem of the French Riviera! Here, the Mediterranean meets lively evenings, golden beaches and walks between pine trees and charming streets. You are in the heart of a vibrant destination, between Provençal sweetness and Riviera elegance. Enjoy the beach, restaurants, lively terraces and the unique atmosphere that makes Juan-les-Pins so special.">
+     data-en="Welcome to Juan-les-Pins, a gem of the French Riviera! Here, the Mediterranean meets lively evenings, golden beaches and charming walks between pine trees and little streets. You are in the heart of a vibrant destination, between Provençal softness and Riviera elegance. Enjoy the beach, restaurants, lively terraces and the unique atmosphere that makes Juan-les-Pins so special.">
     Bienvenue à Juan-les-Pins, perle de la Côte d’Azur ! Ici, la mer Méditerranée se mêle à l’effervescence des soirées, aux plages dorées et aux balades entre pins et ruelles charmantes. Vous êtes au cœur d’un lieu vivant, entre douceur provençale et élégance azuréenne. Profitez de la plage, des restaurants, des terrasses animées et de l’ambiance unique qui fait la réputation de Juan-les-Pins.
   </p>
 
@@ -130,11 +131,14 @@
     </div>
 
     <div class="address-card">
-      <span data-fr="xx avenue du docteur Fabre<br>06160 Juan-les-Pins" data-en="xx avenue du docteur Fabre<br>06160 Juan-les-Pins">
+      <span data-fr="xx avenue du docteur Fabre<br>06160 Juan-les-Pins"
+            data-en="xx avenue du docteur Fabre<br>06160 Juan-les-Pins">
         xx avenue du docteur Fabre<br>06160 Juan-les-Pins
       </span>
       <br>
-      <a class="map-btn" href="https://maps.google.com" target="_blank" data-fr="Voir sur Google Maps" data-en="View on Google Maps">
+      <a class="map-btn" href="https://maps.google.com" target="_blank"
+         data-fr="Voir sur Google Maps"
+         data-en="View on Google Maps">
         Voir sur Google Maps
       </a>
     </div>
@@ -237,7 +241,6 @@
     function loop() {
       if (!pause && !pausedByTouch) {
         el.scrollLeft += speed;
-
         if (el.scrollLeft >= el.scrollWidth / 2) {
           el.scrollLeft = 0;
         }
@@ -279,20 +282,6 @@
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    const existingSwitch = document.querySelector(".lang-switch");
-    if (!existingSwitch) {
-      const headerInner = document.querySelector(".header-inner");
-      if (headerInner) {
-        const switcher = document.createElement("div");
-        switcher.className = "lang-switch";
-        switcher.innerHTML = `
-          <button class="lang-btn" data-lang="fr" onclick="setLanguage('fr')">FR</button>
-          <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
-        `;
-        headerInner.appendChild(switcher);
-      }
-    }
-
     const savedLang = localStorage.getItem("siteLang") || "fr";
     setLanguage(savedLang);
     setupCarousel("infos-carousel", 0.35);
