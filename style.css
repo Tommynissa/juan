@@ -560,4 +560,28 @@ body {
   color: #fff;
   border-color: var(--accent);
 }
+.copy-btn {
+  margin-top: 14px;
+  border: 1px solid var(--accent);
+  background: #fff;
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(176, 148, 109, 0.08);
+  transition: all 0.2s ease;
+}
+
+.copy-btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.copy-feedback {
+  margin: 10px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+}
 }
