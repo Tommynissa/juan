@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Groceries & Food</title>
+  <title>Alimentation</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -11,100 +11,122 @@
 
 <header class="header">
   <div class="header-inner">
-    <a class="back-btn" href="asavoir.html">
+    <a class="back-btn" href="activites.html">
       <i class="fa-solid fa-arrow-left"></i>
     </a>
-    <h1>Groceries & Food</h1>
+
+    <h1 data-fr="Alimentation & Courses" data-en="Groceries & Shopping">
+      Alimentation & Courses
+    </h1>
+
+    <div class="lang-switch">
+      <button class="lang-btn" data-lang="fr" onclick="setLanguage('fr')">FR</button>
+      <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+    </div>
   </div>
 </header>
 
 <main class="content">
 
-  <p class="intro">
-    For your everyday shopping, several convenient stores are located near the apartment, whether you need a few quick items, breakfast supplies, or full grocery shopping.
+  <p class="intro"
+     data-fr="Voici quelques commerces pratiques à proximité pour vos courses du quotidien."
+     data-en="Here are some convenient places nearby for your daily shopping.">
+    Voici quelques commerces pratiques à proximité pour vos courses du quotidien.
   </p>
 
+  <!-- CARREFOUR 1 -->
   <article class="place full-width-premium">
-    <img src="placeholder.svg" alt="Carrefour City Juan Les Pins">
+    <img src="placeholder.svg" alt="Carrefour City">
     <div class="body">
-      <h3>Carrefour City Juan Les Pins</h3>
-      <a class="addr" href="https://www.google.com/maps/search/?api=1&query=122+Boulevard+Wilson+06160+Juan+Les+Pins" target="_blank">
-        122 Boulevard Wilson, 06160 Juan-les-Pins
+      <h3>Carrefour City</h3>
+
+      <a class="addr"
+         href="https://www.google.com/maps/search/?api=1&query=122+Boulevard+Wilson+Juan+les+Pins"
+         target="_blank">
+        122 Boulevard Wilson, Juan-les-Pins
       </a>
-      <p>
-        Very convenient for everyday shopping: drinks, fresh products, breakfast items, quick essentials and everything you may need during your stay. Open daily from 7:00 AM to 9:00 PM.
+
+      <p data-fr="Idéal pour les courses du quotidien, produits frais et essentiels."
+         data-en="Perfect for daily shopping, fresh products and essentials.">
+        Idéal pour les courses du quotidien, produits frais et essentiels.
       </p>
     </div>
   </article>
 
+  <!-- CARREFOUR 2 -->
   <article class="place full-width-premium">
-    <img src="placeholder.svg" alt="Carrefour City Juan-Les-Pins Poincare47">
+    <img src="placeholder.svg" alt="Carrefour Poincaré">
     <div class="body">
-      <h3>Carrefour City Juan-Les-Pins Poincare47</h3>
-      <a class="addr" href="https://www.google.com/maps/search/?api=1&query=47+Boulevard+Raymond+Poincare+06160+Juan+Les+Pins" target="_blank">
-        47 Boulevard Raymond Poincaré, 06160 Juan-les-Pins
+      <h3>Carrefour City Poincaré</h3>
+
+      <a class="addr"
+         href="https://www.google.com/maps/search/?api=1&query=47+Boulevard+Poincare+Juan+les+Pins"
+         target="_blank">
+        47 Boulevard Raymond Poincaré, Juan-les-Pins
       </a>
-      <p>
-        Another convenient option in Juan-les-Pins for quick grocery shopping. The store offers extended opening hours and is also open on Sundays.
+
+      <p data-fr="Option pratique pour faire vos courses rapidement à proximité."
+         data-en="Convenient option for quick shopping nearby.">
+        Option pratique pour faire vos courses rapidement à proximité.
       </p>
     </div>
   </article>
 
+  <!-- MONOPRIX -->
   <article class="place full-width-premium">
     <img src="placeholder.svg" alt="Monoprix Antibes">
     <div class="body">
       <h3>Monoprix Antibes</h3>
-      <a class="addr" href="https://www.google.com/maps/search/?api=1&query=Place+du+General+de+Gaulle+06600+Antibes" target="_blank">
-        Place du Général de Gaulle, 06600 Antibes
+
+      <a class="addr"
+         href="https://www.google.com/maps/search/?api=1&query=Place+du+General+de+Gaulle+Antibes"
+         target="_blank">
+        Place du Général de Gaulle, Antibes
       </a>
-      <p>
-        If you are looking for a wider selection, Monoprix Antibes is a great option for groceries, daily essentials and additional items. Ideal if you are visiting Antibes city center.
+
+      <p data-fr="Supermarché plus grand avec un large choix en centre-ville."
+         data-en="Larger supermarket with a wide selection in the city center.">
+        Supermarché plus grand avec un large choix en centre-ville.
       </p>
     </div>
   </article>
-
-  <div class="full-list">
-    <div class="card-block">
-      <div class="icon-wrap">
-        <i class="fa-solid fa-bread-slice"></i>
-      </div>
-      <div>
-        <h3>Breakfast & Bakery</h3>
-        <p>
-          For fresh bread, pastries and quick morning essentials, nearby local bakeries are often the easiest and most enjoyable option.
-        </p>
-      </div>
-    </div>
-
-    <div class="card-block">
-      <div class="icon-wrap">
-        <i class="fa-solid fa-lightbulb"></i>
-      </div>
-      <div>
-        <h3>Practical tip</h3>
-        <p>
-          You can personalize this page by adding your favorite nearby spots: bakery, wine shop, fruit market or the closest convenience store within walking distance.
-        </p>
-      </div>
-    </div>
-  </div>
 
 </main>
 
 <nav class="bottom-nav">
   <a href="index.html">
     <i class="fa-solid fa-house"></i>
-    <span>Home</span>
+    <span data-fr="Accueil" data-en="Home">Accueil</span>
   </a>
-  <a href="asavoir.html" class="active">
+  <a href="asavoir.html">
     <i class="fa-solid fa-circle-info"></i>
-    <span>Info</span>
+    <span data-fr="Appartement" data-en="Apartment">Appartement</span>
   </a>
-  <a href="activites.html">
+  <a href="activites.html" class="active">
     <i class="fa-solid fa-compass"></i>
-    <span>Activities</span>
+    <span data-fr="À proximité" data-en="Nearby">À proximité</span>
   </a>
 </nav>
+
+<script>
+  function setLanguage(lang) {
+    document.querySelectorAll("[data-fr]").forEach(el => {
+      const value = el.getAttribute("data-" + lang);
+      if (value !== null) el.innerHTML = value;
+    });
+
+    localStorage.setItem("siteLang", lang);
+
+    document.querySelectorAll(".lang-btn").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const savedLang = localStorage.getItem("siteLang") || "fr";
+    setLanguage(savedLang);
+  });
+</script>
 
 </body>
 </html>
