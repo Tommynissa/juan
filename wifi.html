@@ -43,14 +43,20 @@
       <div class="wifi-details">
         <div class="wifi-line">
           <span class="wifi-label" data-fr="Nom du réseau" data-en="Network name">Nom du réseau</span>
-          <span class="wifi-value">ANAÏS_WIFI</span>
+          <span class="wifi-value">freebox-5BFE08</span>
         </div>
 
         <div class="wifi-line">
           <span class="wifi-label" data-fr="Mot de passe" data-en="Password">Mot de passe</span>
-          <span class="wifi-value">12345678</span>
+          <span class="wifi-value" id="wifi-password">vrczwqwrtmqxc4w3q679cd</span>
         </div>
       </div>
+
+      <button class="copy-btn" onclick="copyWifiPassword()" data-fr="Copier le mot de passe" data-en="Copy password">
+        Copier le mot de passe
+      </button>
+
+      <p class="copy-feedback" id="copy-feedback"></p>
     </div>
   </article>
 
@@ -63,11 +69,11 @@
   </a>
   <a href="asavoir.html" class="active">
     <i class="fa-solid fa-circle-info"></i>
-    <span data-fr="À savoir" data-en="Info">À savoir</span>
+    <span data-fr="Appartement" data-en="Apartment">Appartement</span>
   </a>
   <a href="activites.html">
     <i class="fa-solid fa-compass"></i>
-    <span data-fr="Activités" data-en="Activities">Activités</span>
+    <span data-fr="À proximité" data-en="Nearby">À proximité</span>
   </a>
 </nav>
 
@@ -83,6 +89,27 @@
     document.querySelectorAll(".lang-btn").forEach(btn => {
       btn.classList.toggle("active", btn.dataset.lang === lang);
     });
+  }
+
+  async function copyWifiPassword() {
+    const password = document.getElementById("wifi-password").textContent.trim();
+    const feedback = document.getElementById("copy-feedback");
+    const lang = localStorage.getItem("siteLang") || "fr";
+
+    try {
+      await navigator.clipboard.writeText(password);
+      feedback.textContent = lang === "fr"
+        ? "Mot de passe copié."
+        : "Password copied.";
+    } catch (e) {
+      feedback.textContent = lang === "fr"
+        ? "Impossible de copier automatiquement."
+        : "Unable to copy automatically.";
+    }
+
+    setTimeout(() => {
+      feedback.textContent = "";
+    }, 2000);
   }
 
   document.addEventListener("DOMContentLoaded", () => {
