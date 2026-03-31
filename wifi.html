@@ -32,33 +32,45 @@
     Une connexion Wi-Fi est disponible dans tout l’appartement pour vous permettre de naviguer, travailler ou profiter de vos contenus en toute tranquillité.
   </p>
 
-  <article class="card-block wifi-card-premium">
-    <div class="icon-wrap">
-      <i class="fa-solid fa-wifi"></i>
-    </div>
+<article class="card-block wifi-card-premium">
+  <div class="icon-wrap">
+    <i class="fa-solid fa-wifi"></i>
+  </div>
 
-    <div class="wifi-content">
-      <h3 data-fr="Connexion Internet" data-en="Internet Connection">Connexion Internet</h3>
+  <div class="wifi-content">
+    <h3 data-fr="Connexion Internet" data-en="Internet Connection">
+      Connexion Internet
+    </h3>
 
-      <div class="wifi-details">
-        <div class="wifi-line">
-          <span class="wifi-label" data-fr="Nom du réseau" data-en="Network name">Nom du réseau</span>
-          <span class="wifi-value">freebox-5BFE08</span>
-        </div>
+    <div class="wifi-details">
 
-        <div class="wifi-line">
-          <span class="wifi-label" data-fr="Mot de passe" data-en="Password">Mot de passe</span>
-          <span class="wifi-value" id="wifi-password">vrczwqwrtmqxc4w3q679cd</span>
-        </div>
+      <div class="wifi-line">
+        <span class="wifi-label" data-fr="Nom du réseau :" data-en="Network name :">
+          <strong>Nom du réseau :</strong>
+        </span>
+        <span class="wifi-value">freebox-5BFE08</span>
       </div>
 
-      <button class="copy-btn" onclick="copyWifiPassword()" data-fr="Copier le mot de passe" data-en="Copy password">
-        Copier le mot de passe
-      </button>
+      <div class="wifi-line">
+        <span class="wifi-label" data-fr="Mot de passe :" data-en="Password :">
+          <strong>Mot de passe :</strong>
+        </span>
+        <span class="wifi-value password" id="wifi-password">
+          vrczwqwrtmqxc4w3q679cd
+        </span>
+      </div>
 
-      <p class="copy-feedback" id="copy-feedback"></p>
     </div>
-  </article>
+
+    <button class="copy-btn" onclick="copyWifiPassword()"
+      data-fr="Copier le mot de passe"
+      data-en="Copy password">
+      Copier le mot de passe
+    </button>
+
+    <p class="copy-feedback" id="copy-feedback"></p>
+  </div>
+</article>
 
 </main>
 
