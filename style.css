@@ -584,4 +584,38 @@ body {
   font-size: 13px;
   color: var(--muted);
 }
+.wifi-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.wifi-line {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.wifi-label {
+  font-size: 13px;
+  color: #888;
+}
+
+.wifi-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* mot de passe stylé */
+.password {
+  font-family: monospace;
+  letter-spacing: 1px;
+  background: #f8f8f8;
+  padding: 8px 10px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
 }
