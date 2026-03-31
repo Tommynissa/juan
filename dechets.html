@@ -3,65 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Déchets & tri</title>
+  <title>Déchets</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<header>
+<header class="header">
   <div class="header-inner">
     <a class="back-btn" href="asavoir.html"><i class="fa-solid fa-arrow-left"></i></a>
-    <h1>Déchets & tri</h1>
+
+    <h1 data-fr="Déchets" data-en="Waste">Déchets</h1>
+
+    <div class="lang-switch">
+      <button class="lang-btn" data-lang="fr" onclick="setLanguage('fr')">FR</button>
+      <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+    </div>
   </div>
 </header>
 
 <main class="content">
-  <p class="intro">
-    Merci de contribuer au bon entretien du logement et au respect de l’environnement.
+
+  <p class="intro"
+     data-fr="Merci de respecter les lieux en utilisant les espaces prévus pour les déchets."
+     data-en="Please help keep the place clean by using the designated waste area.">
+    Merci de respecter les lieux en utilisant les espaces prévus pour les déchets.
   </p>
 
-  <div class="full-list">
-    <div class="card-block">
-      <div class="icon-wrap"><i class="fa-solid fa-trash"></i></div>
-      <div>
-        <h3>Ordures ménagères</h3>
-        <p>Déposez-les dans le bac prévu à cet effet, bien fermées dans des sacs.</p>
-      </div>
-    </div>
+  <article class="place full-width-premium">
+    <img src="poubellevue.jpg" alt="Accès local poubelle">
+    <div class="body">
+      <h3 data-fr="Local poubelle" data-en="Trash room">Local poubelle</h3>
 
-    <div class="card-block">
-      <div class="icon-wrap"><i class="fa-solid fa-recycle"></i></div>
-      <div>
-        <h3>Tri sélectif</h3>
-        <p>Séparez papier, carton, verre et plastique lorsque cela est possible.</p>
-      </div>
-    </div>
+      <p data-fr="Les poubelles sont situées à l’extérieur du bâtiment, dans le local dédié."
+         data-en="The bins are located outside the building in the dedicated trash room.">
+        Les poubelles sont situées à l’extérieur du bâtiment, dans le local dédié.
+      </p>
 
-    <div class="card-block">
-      <div class="icon-wrap"><i class="fa-solid fa-broom"></i></div>
-      <div>
-        <h3>Avant votre départ</h3>
-        <p>Merci de vider les poubelles principales avant votre départ.</p>
-      </div>
+      <p data-fr="Il faut sortir du bâtiment et suivre le passage indiqué sur les photos."
+         data-en="You need to exit the building and follow the passage shown in the photos.">
+        Il faut sortir du bâtiment et suivre le passage indiqué sur les photos.
+      </p>
     </div>
-  </div>
+  </article>
+
+  <article class="place full-width-premium">
+    <img src="poub.jpg" alt="Porte du local poubelle">
+    <div class="body">
+      <h3 data-fr="Accès au local" data-en="Access to the trash room">Accès au local</h3>
+
+      <p data-fr="Un badge est nécessaire pour ouvrir le local poubelle."
+         data-en="A badge is required to open the trash room.">
+        Un badge est nécessaire pour ouvrir le local poubelle.
+      </p>
+
+      <p data-fr="Le badge se trouve dans la boîte à clé de l’appartement."
+         data-en="The badge is available in the apartment key box.">
+        Le badge se trouve dans la boîte à clé de l’appartement.
+      </p>
+    </div>
+  </article>
+
 </main>
 
 <nav class="bottom-nav">
   <a href="index.html">
     <i class="fa-solid fa-house"></i>
-    <span>Accueil</span>
+    <span data-fr="Accueil" data-en="Home">Accueil</span>
   </a>
   <a href="asavoir.html" class="active">
     <i class="fa-solid fa-circle-info"></i>
-    <span>À savoir</span>
+    <span data-fr="Appartement" data-en="Apartment">Appartement</span>
   </a>
   <a href="activites.html">
     <i class="fa-solid fa-compass"></i>
-    <span>Activités</span>
+    <span data-fr="À proximité" data-en="Nearby">À proximité</span>
   </a>
 </nav>
+
+<script>
+  function setLanguage(lang) {
+    document.querySelectorAll("[data-fr]").forEach(el => {
+      const value = el.getAttribute("data-" + lang);
+      if (value !== null) el.innerHTML = value;
+    });
+
+    localStorage.setItem("siteLang", lang);
+
+    document.querySelectorAll(".lang-btn").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const savedLang = localStorage.getItem("siteLang") || "fr";
+    setLanguage(savedLang);
+  });
+</script>
 
 </body>
 </html>
