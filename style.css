@@ -617,5 +617,46 @@ body {
   border-radius: 8px;
   display: inline-block;
 }
+.wifi-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
 
+.wifi-line {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.password {
+  font-family: monospace;
+  letter-spacing: 1px;
+  background: #f8f8f8;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.copy-btn {
+  margin-top: 14px;
+  border: 1px solid #a87d2d;
+  background: #fff;
+  color: #a87d2d;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-weight: 600;
+}
+
+.wifi-qr {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.wifi-qr img {
+  width: 160px;
+  border-radius: 12px;
+  padding: 10px;
+  background: #fff;
+}
 }
